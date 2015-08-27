@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Kontakt</title>
+</head>
+<body>
+	<h1>Linus-inte-så-bra-site</h1>
+	<h2>Min blog där jag publicerar dumheter</h2>
+	<nav>
+		<ul>
+			<li><a href="../index.html" title="index">Hem</a></li>
+			<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+			<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+			<li><a href="presentation.html" title="presentation">Presentation</a></li>
+		</ul>
+	</nav>
+	<h1>Kontakt</h1>
+	<form action="http://webproduction.standout.se/form.php" method="post" accept-charset="utf-8">
+		<label>Ärendetyp:</label> 
+		<select name="select">
+			<option value="fraga">Fråga</option>
+			<option value="annat">Annat</option>
+		</select>
+		<br>
+		<label>Rubrik:</label>
+		<input type="text" name="rubrik" value="">
+		<br>
+		<label>Fråga:</label>
+		<textarea name="body"></textarea>
+		<br />
+		<label>Är du en Spam-bot?</label>
+		<label>Ja: <input type="radio" name="ja"></label>
+		<label>Nej: <input type="radio" name="ja"></label>
+		<input type="submit" name="submit" value="submit">
+	</form>
+</body>
+</html>
