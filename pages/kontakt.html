@@ -17,5 +17,23 @@
 		</ul>
 	</nav>
 	<h1>Kontakt</h1>
+	<form action="http://webproduction.standout.se/form.php" method="post" accept-charset="utf-8">
+		<label>Ärendetyp:</label> 
+		<select name="select">
+			<option value="fraga">Fråga</option>
+			<option value="annat">Annat</option>
+		</select>
+		<br>
+		<label>Rubrik:</label>
+		<input type="text" name="rubrik" value="">
+		<br>
+		<label>Fråga:</label>
+		<textarea name="body"></textarea>
+		<br />
+		<label>Är du en Spam-bot?</label>
+		<label>Ja: <input type="radio" name="ja"></label>
+		<label>Nej: <input type="radio" name="ja"></label>
+		<input type="submit" name="submit" value="submit">
+	</form>
 </body>
 </html>
