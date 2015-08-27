@@ -1,2 +1,2 @@
-# laboration1
-Repository for lab1
+# Laboration 1
+This is my repository for Lab 1
