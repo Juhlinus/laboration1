@@ -23,29 +23,27 @@
 				<legend>Kontakt</legend>
 				<p>
 					<label for="arende">Ärendetyp:</label> 
-					<select name="arende">
+					<select name="arende" id="arende">
 						<option value="fraga">Fråga</option>
 						<option value="annat">Annat</option>
 					</select>
 				</p>
 				<p>
 					<label for="rubrik">Rubrik:</label>
-					<input type="text" name="rubrik">
+					<input type="text" name="rubrik" id="rubrik">
 				</p>
 				<p>
 					<label for="body">Fråga:</label>
-					<textarea name="body"></textarea>
+					<textarea name="body" id="body"></textarea>
 				</p>
 				<p>
-					<label for="spam">Är du en Spam-bot?</label>
-					<p>
+					<label>Är du en Spam-bot?</label>
 						Ja: <input type="radio" name="spam" value="yes">
 						Kanske: <input type="radio" name="spam" value="maybe" checked>
 						Nej: <input type="radio" name="spam" value="no">
-					</p>
 				</p>
 				<p>
-					<p><label>Vad är din sexuella läggning?</label></p>
+					<label>Vad är din sexuella läggning?</label>
 					Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
 					Panter: <input type="checkbox" name="grp[]" value="panter" checked>
 					Get: <input type="checkbox" name="grp[]" value="get" checked>
