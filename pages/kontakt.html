@@ -6,34 +6,57 @@
 	<title>Kontakt</title>
 </head>
 <body>
-	<h1>Linus-inte-så-bra-site</h1>
-	<h2>Min blog där jag publicerar dumheter</h2>
-	<nav>
-		<ul>
-			<li><a href="../index.html" title="index">Hem</a></li>
-			<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
-			<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
-			<li><a href="presentation.html" title="presentation">Presentation</a></li>
-		</ul>
-	</nav>
-	<h1>Kontakt</h1>
-	<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
-		<label>Ärendetyp:</label> 
-		<select name="arende">
-			<option value="fraga">Fråga</option>
-			<option value="annat">Annat</option>
-		</select>
-		<br>
-		<label>Rubrik:</label>
-		<input type="text" name="rubrik" value="">
-		<br>
-		<label>Fråga:</label>
-		<textarea name="body"></textarea>
-		<br />
-		<label>Är du en Spam-bot?</label>
-		<label>Ja: <input type="radio" name="ja"></label>
-		<label>Nej: <input type="radio" name="nej"></label>
-		<input type="submit" name="submit" value="submit">
-	</form>
+	<header>
+		<h1>Linus-inte-så-bra-site</h1>
+		<nav>
+			<ul>
+				<li><a href="../index.html" title="index">Hem</a></li>
+				<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+				<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+				<li><a href="presentation.html" title="presentation">Presentation</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
+			<fieldset>
+				<legend>Kontakt</legend>
+				<p>
+					<label for="arende">Ärendetyp:</label> 
+					<select name="arende">
+						<option value="fraga">Fråga</option>
+						<option value="annat">Annat</option>
+					</select>
+				</p>
+				<p>
+					<label for="rubrik">Rubrik:</label>
+					<input type="text" name="rubrik">
+				</p>
+				<p>
+					<label for="body">Fråga:</label>
+					<textarea name="body"></textarea>
+				</p>
+				<p>
+					<label for="spam">Är du en Spam-bot?</label>
+					<p>
+						Ja: <input type="radio" name="spam" value="yes">
+						Kanske: <input type="radio" name="spam" value="maybe" checked>
+						Nej: <input type="radio" name="spam" value="no">
+					</p>
+				</p>
+				<p>
+					<p><label>Vad är din sexuella läggning?</label></p>
+					Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
+					Panter: <input type="checkbox" name="grp[]" value="panter" checked>
+					Get: <input type="checkbox" name="grp[]" value="get" checked>
+					Annat: <input type="checkbox" name="grp[]" value="annat">
+				</p>
+				<input type="submit" name="submit" value="submit">
+			</fieldset>
+		</form>
+	</main>
+	<footer>
+		<h3>Affärsrelaterade frågor samt allt annat mailas till: <a href="mailto:spam@p1raten.com">spam@p1raten.com</a></h3>
+	</footer>
 </body>
 </html>
