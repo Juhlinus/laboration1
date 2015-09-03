@@ -3,43 +3,112 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
 	<title>Index</title>
 </head>
 <body>
-	<img src="pics/logga.png" alt="Linus Logga" />
-	<h1>Linus-inte-så-bra-site</h1>
-	<h2>Min blog där jag publicerar dumheter</h2>
-	<nav>
-		<ul>
-			<li><a href="index.html" title="index">Hem</a></li>
-			<li><a href="pages/kontakt.html" title="kontakt">Kontakt</a></li>
-			<li><a href="pages/laborationer.html" title="laborationer">Laborationer</a></li>
-			<li><a href="pages/presentation.html" title="presentation">Presentation</a></li>
-		</ul>
-	</nav>
-	<article>
-		<h3 id="minvideo">NY TRAILER TILL MIN FILM</h3>
-		<p>Jag har gjort den själv!</p>
-		<video controls>
-			<source src="videos/trailer_400p.ogg" />
-			<object type="video/ogg" data="videos/trailer_400p.ogg" width="320" height="240">
-				<param name="src" value="videos/trailer_400p.ogg" />
-				<param name="autoplay" value="false" />
-				<param name="autoStart" value="0" />
-			</object>
-		</video>
-		<hr>
-	</article>
-	<article>
-		<h3 id="minsvg" style="center">Tja tja bloggen!</h3>
-		<p>Idag har jag lekt med SVG. Det va kul.</p>
-		<img src="pics/minsvg.svg" alt="Min SVG" />
-		<hr>
-	</article>
-	<article>
-		<h3>MonoGame</h3>
-		<p>Jag började experimentera i Mono Game och lyckades få mitt animationssystem att fungera som jag ville. <a href="https://twitter.com/hashtag/stolt" title="#stolt">#Stolt</a></p>
-		<img src="pics/ILIKEDICKSUPMYBUTT.gif" alt="animerad karaktär som går" />
-	</article>
+<!--
+                                      emigvggem                                         
+                                  igvggemigvggemigv                                     
+                              ggemigvggemigvggemigvgge                                  
+                      migvggemigvggem           igvggemi                                
+                   gvggemigvggem                  igvggem                               
+                 igvggemigvggemi                   gvggem                               
+                 igvggemigvggemig                   vggem                               
+                 igvggemigvg gemigv    ggemigvggem  igvgg                               
+                 emigvggemigvggemigv ggemigvggemigvg gemi                               
+                 gvggemigvggemigvg  gemigvggemigvggemigvg                               
+                gemig  vggemigvgge  migvggemigvggemigvgge                               
+               migvggemigvggemigvgg emigvggemig vggemigvg                               
+              gemigvggemigvggemig   vggemigvggemigvggemig                               
+             vggemigvggemigvggemigvggemigvggemigv  ggemi                                
+            gvgge          migvggemigvggemigv     ggemig                                
+           vggem                      igvggem     igvgge                                
+          migvgg                                 emigvg                                 
+         gemigv                                 ggemig                                  
+        vggemi                                  gvggem                                  
+        igvgg                      emig        vggemi                                   
+        gvgg                      emigv gge   migvgg                                    
+        emig                      vggemigvgg  emigv                         ggemigvgg   
+       emigv                      ggemigvgg  emigv                        ggemigvggemi  
+       gvgge                     migvggemig vggem                       igvgge    migv  
+       ggemi                     gvggemigv  ggemi                     gvggemi    gvgge  
+       migvg                    gemigvgge  migvgg                   emigvgg     emigv   
+       ggemi                    gvggemig   vggemigvggemigvggemi   gvggemi     gvgge     
+        migv                   ggemigvg    gemigvggemigvggemigvggemigvg      gemig      
+        vgge                   migvgge     migvg   gemig   vggemigvgg      emigvg       
+        gemi                  gvggemig      vgg   emigvggemigvggemi      gvggem         
+        igvgg               emigv ggemi         gvggemigvggemigvgg     emigvgg          
+         emig             vggem  igvggem         igvggemigvggemigvgg   emigvgge         
+         migvg            gemigvggemigvg                     gemigvgg    emigvggem      
+          igvgg            emigvggemigv              ggem       igvgge  migv ggemi      
+          gvggem              igvg                   gemi        gvggem  igvggemi       
+           gvggem                                igv              ggemi    gvgg         
+            emigvgge                            migv              ggemi     gvgg        
+               emigvgg                          emig              vggemigvggemig        
+     vgg        emigvggemi                       gvgg           emigvggemigvgge         
+    migvgge    migvggemigvggemig                  vgg         emigvgg    e              
+    migvggemigvgge migvggemigvggemigvgge           migv    ggemigv                      
+    ggem igvggemigvggem    igvggemigvggemi gvggemigvggemigvggemi                        
+     gvgg  emigvggemi         gvggemigvgg emigvggemigvggemigv                           
+      ggem   igvgge         migvggemigvg gemig vggemigvgge                              
+       migvggemig           vggemigvgge  migv                                           
+        ggemigv              ggemigvg   gemi                                            
+          gvg                gemigv    ggem                                             
+                              igvgge  migv                                              
+                               ggemigvgge                                               
+                                 migvgge                                                
+                                   mig       
+-->
+	<div id="top-border"></div>
+	<div id="wrapper">
+		<header>
+			<nav class="divide-5">
+				<!-- fa-rotate-90 -->
+				<span class="fa fa-2x fa-bars"></span>
+				<ul>
+					<li><a href="index.html" title="index">Hem</a></li>
+					<li><a href="pages/kontakt.html" title="kontakt">Kontakt</a></li>
+					<li><a href="pages/laborationer.html" title="laborationer">Laborationer</a></li>
+					<li><a href="pages/presentation.html" title="presentation">Presentation</a></li>
+				</ul>
+			</nav>
+			<div class="divide-15">
+				<img src="pics/logga.png" alt="Linus Logga" />
+			</div>
+			<div class="title divide-80">
+				<h1>Linus-inte-så-bra-site</h1>
+				<h2>Min blog där jag publicerar dumheter</h2>
+			</div>
+		</header>
+		<article>
+			<h3 id="minvideo">NY TRAILER TILL MIN FILM</h3>
+			<p>Jag har gjort den själv!</p>
+			<video controls>
+				<source src="videos/trailer_400p.ogg" />
+				<object type="video/ogg" data="videos/trailer_400p.ogg" width="320" height="240">
+					<param name="src" value="videos/trailer_400p.ogg" />
+					<param name="autoplay" value="false" />
+					<param name="autoStart" value="0" />
+				</object>
+			</video>
+			<hr>
+		</article>
+		<article>
+			<h3 id="minsvg" style="center">Tja tja bloggen!</h3>
+			<p>Idag har jag lekt med SVG. Det va kul.</p>
+			<img src="pics/minsvg.svg" alt="Min SVG" />
+			<hr>
+		</article>
+		<article>
+			<h3>MonoGame</h3>
+			<p>Jag började experimentera i Mono Game och lyckades få mitt animationssystem att fungera som jag ville. <a href="https://twitter.com/hashtag/stolt" title="#stolt">#Stolt</a></p>
+			<img src="pics/ILIKEDICKSUPMYBUTT.gif" alt="animerad karaktär som går" />
+		</article>
+	</div>
 </body>
 </html>
