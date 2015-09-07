@@ -8,111 +8,87 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 	<title>Index</title>
 </head>
 <body>
-<!--
-                                      emigvggem                                         
-                                  igvggemigvggemigv                                     
-                              ggemigvggemigvggemigvgge                                  
-                      migvggemigvggem           igvggemi                                
-                   gvggemigvggem                  igvggem                               
-                 igvggemigvggemi                   gvggem                               
-                 igvggemigvggemig                   vggem                               
-                 igvggemigvg gemigv    ggemigvggem  igvgg                               
-                 emigvggemigvggemigv ggemigvggemigvg gemi                               
-                 gvggemigvggemigvg  gemigvggemigvggemigvg                               
-                gemig  vggemigvgge  migvggemigvggemigvgge                               
-               migvggemigvggemigvgg emigvggemig vggemigvg                               
-              gemigvggemigvggemig   vggemigvggemigvggemig                               
-             vggemigvggemigvggemigvggemigvggemigv  ggemi                                
-            gvgge          migvggemigvggemigv     ggemig                                
-           vggem                      igvggem     igvgge                                
-          migvgg                                 emigvg                                 
-         gemigv                                 ggemig                                  
-        vggemi                                  gvggem                                  
-        igvgg                      emig        vggemi                                   
-        gvgg                      emigv gge   migvgg                                    
-        emig                      vggemigvgg  emigv                         ggemigvgg   
-       emigv                      ggemigvgg  emigv                        ggemigvggemi  
-       gvgge                     migvggemig vggem                       igvgge    migv  
-       ggemi                     gvggemigv  ggemi                     gvggemi    gvgge  
-       migvg                    gemigvgge  migvgg                   emigvgg     emigv   
-       ggemi                    gvggemig   vggemigvggemigvggemi   gvggemi     gvgge     
-        migv                   ggemigvg    gemigvggemigvggemigvggemigvg      gemig      
-        vgge                   migvgge     migvg   gemig   vggemigvgg      emigvg       
-        gemi                  gvggemig      vgg   emigvggemigvggemi      gvggem         
-        igvgg               emigv ggemi         gvggemigvggemigvgg     emigvgg          
-         emig             vggem  igvggem         igvggemigvggemigvgg   emigvgge         
-         migvg            gemigvggemigvg                     gemigvgg    emigvggem      
-          igvgg            emigvggemigv              ggem       igvgge  migv ggemi      
-          gvggem              igvg                   gemi        gvggem  igvggemi       
-           gvggem                                igv              ggemi    gvgg         
-            emigvgge                            migv              ggemi     gvgg        
-               emigvgg                          emig              vggemigvggemig        
-     vgg        emigvggemi                       gvgg           emigvggemigvgge         
-    migvgge    migvggemigvggemig                  vgg         emigvgg    e              
-    migvggemigvgge migvggemigvggemigvgge           migv    ggemigv                      
-    ggem igvggemigvggem    igvggemigvggemi gvggemigvggemigvggemi                        
-     gvgg  emigvggemi         gvggemigvgg emigvggemigvggemigv                           
-      ggem   igvgge         migvggemigvg gemig vggemigvgge                              
-       migvggemig           vggemigvgge  migv                                           
-        ggemigv              ggemigvg   gemi                                            
-          gvg                gemigv    ggem                                             
-                              igvgge  migv                                              
-                               ggemigvgge                                               
-                                 migvgge                                                
-                                   mig       
--->
-	<div id="top-border"></div>
 	<div id="wrapper">
-		<header>
-			<nav class="divide-5">
-				<!-- fa-rotate-90 -->
-				<span class="fa fa-2x fa-bars"></span>
+		<div id="header-wrapper">
+			<header>
+				<nav class="divide-5 no-select">
+					<!-- fa-rotate-90 -->
+					<span class="fa fa-2x fa-bars no-select"></span>
+				</nav>
+				<div class="divide-12">
+					<div class="logo">
+						<img src="pics/logga.png" alt="Linus Logga" />
+					</div>
+				</div>
+				<div class="divide-82">
+					<div class="text-wrap">
+						<h1>Linus-inte-så-bra-site</h1>
+						<p>Min blog där jag pubicerar dumheter</p>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="divide-15 nav">
+			<div id="nav">
 				<ul>
 					<li><a href="index.html" title="index">Hem</a></li>
 					<li><a href="pages/kontakt.html" title="kontakt">Kontakt</a></li>
 					<li><a href="pages/laborationer.html" title="laborationer">Laborationer</a></li>
 					<li><a href="pages/presentation.html" title="presentation">Presentation</a></li>
 				</ul>
-			</nav>
-			<div class="divide-12">
-				<div class="logo">
-					<img src="pics/logga.png" alt="Linus Logga" />
-				</div>
 			</div>
-			<div class="divide-88">
-				<div class="text-wrap">
-					<h1>Linus-inte-så-bra-site</h1>
-					<p>Min blog där jag publicerar dumheter</p>
-				</div>
+		</div>
+		<div class="divide-70 main">
+			<div id="container">
+				<article>
+					<h3 id="minvideo">NY TRAILER TILL MIN FILM</h3>
+					<p>Jag har gjort den själv!</p>
+					<video controls>
+						<source src="videos/trailer_400p.ogg" />
+						<object type="video/ogg" data="videos/trailer_400p.ogg" width="320" height="240">
+							<param name="src" value="videos/trailer_400p.ogg" />
+							<param name="autoplay" value="false" />
+							<param name="autoStart" value="0" />
+						</object>
+					</video>
+				</article>
+				<article>
+					<h3 id="minsvg" style="center">Tja tja bloggen!</h3>
+					<p>Idag har jag lekt med SVG. Det va kul.</p>
+					<img src="pics/minsvg.svg" alt="Min SVG" />
+				</article>
+				<article>
+					<h3>MonoGame</h3>
+					<p>Jag började experimentera i Mono Game och lyckades få mitt animationssystem att fungera som jag ville. <a href="https://twitter.com/hashtag/stolt" title="#stolt">#Stolt</a></p>
+					<img src="pics/ILIKEDICKSUPMYBUTT.gif" alt="animerad karaktär som går" />
+				</article>
 			</div>
-		</header>
-		<article>
-			<h3 id="minvideo">NY TRAILER TILL MIN FILM</h3>
-			<p>Jag har gjort den själv!</p>
-			<video controls>
-				<source src="videos/trailer_400p.ogg" />
-				<object type="video/ogg" data="videos/trailer_400p.ogg" width="320" height="240">
-					<param name="src" value="videos/trailer_400p.ogg" />
-					<param name="autoplay" value="false" />
-					<param name="autoStart" value="0" />
-				</object>
-			</video>
-			<hr>
-		</article>
-		<article>
-			<h3 id="minsvg" style="center">Tja tja bloggen!</h3>
-			<p>Idag har jag lekt med SVG. Det va kul.</p>
-			<img src="pics/minsvg.svg" alt="Min SVG" />
-			<hr>
-		</article>
-		<article>
-			<h3>MonoGame</h3>
-			<p>Jag började experimentera i Mono Game och lyckades få mitt animationssystem att fungera som jag ville. <a href="https://twitter.com/hashtag/stolt" title="#stolt">#Stolt</a></p>
-			<img src="pics/ILIKEDICKSUPMYBUTT.gif" alt="animerad karaktär som går" />
-		</article>
+		</div>
+		<div class="divide-15">
+		</div>
 	</div>
+	<script type="text/javascript" charset="utf-8" defer>
+		$(function() {
+			$('span.fa-bars').click(function() {
+				if ($('span.fa-bars').hasClass('rotate'))
+				{
+					$('span.fa-bars').css('transform', 'rotate(0deg)');
+					$('span.fa-bars').removeClass('rotate');
+					$('.nav').css('left', '-15%');
+				}
+				else
+				{
+					$('span.fa-bars').css('transform', 'rotate(90deg)');
+					$('span.fa-bars').addClass('rotate');
+					$('.nav').css('left', '0');
+				}
+			});
+		});
+	</script>
 </body>
 </html>

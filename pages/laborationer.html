@@ -4,165 +4,213 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Laborationer</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
-	<header>
-		<h1>Linus-inte-så-bra-site</h1>
-		<h2>Min blog där jag publicerar dumheter</h2>
-		<nav>
-			<ul>
-				<li><a href="../index.html" title="index">Hem</a></li>
-				<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
-				<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
-				<li><a href="presentation.html" title="presentation">Presentation</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<h1>Laborationer</h1>
-		<h2>Webbproduktion</h2>
-		<ul>
-			<li><a href="#lab1">Laboration 1</a></li>
-			<li><a href="#lab2">Laboration 2</a></li>
-			<li><a href="#lab3">Laboration 3</a></li>
-		</ul>
-		<table border="1">
-			<colgroup span="4"></colgroup>
-			<tr>
-				<th>Laboration</th>
-				<th>Uppgift</th>
-				<th>Status</th>
-				<th>Redovisad</th>
-			</tr>
-			<tr>
-				<th>1</th>
-				<th>1.1</th>
-				<th>Färdig</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.2</th>
-				<th>Färdig</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.3</th>
-				<th>Färdig</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.4</th>
-				<th>Färdig</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.5</th>
-				<th>Färdig</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.6</th>
-				<th>Färdig</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.7</th>
-				<th>Färdig</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.8</th>
-				<th>Påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>1.9</th>
-				<th>Ej påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>2</th>
-				<th>1</th>
-				<th>Ej påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>2</th>
-				<th>Ej påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>3</th>
-				<th>Ej påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>4</th>
-				<th>Ej påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>5</th>
-				<th>Ej påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th></th>
-				<th>6</th>
-				<th>Ej påbörjad</th>
-				<th></th>
-			</tr>
-			<tr>
-				<th>Laborationsresultat gällande Linus Juhlin.</th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-		</table>
-		<h2 id="lab1">Laboration 1</h2>
-		<ol>
-			<li>Frågor/Svar Uppgift 1.4
-				<dl>
-					<dt>Fråga först, sen svar</dt>
-					<dd>1.4.1 Vilken är den absoluta sökvägen till filen bottom.html?</dd>
-					<dd><strong>Svar:</strong> http://server.se/html/pages/bottom.html</dd>
-					<dd>1.4.2 Vilken är den relativa sökvägen från filen default.html till filen top.html?</dd>
-					<dd><strong>Svar:</strong> pages/top.html alternativt /pages/top.html beroende på hur webbservern tolkar det</dd>
-					<dd>1.4.3 Vilken är den relativa sökvägen från filen bottom.html till filen index.html?</dd>
-					<dd><strong>Svar:</strong> ../../index.html</dd>
-					<dd>1.4.4 Vilken är den absoluta sökvägen till filen index.html?</dd>
-					<dd><strong>Svar:</strong> http://server.se/index.html</dd>
-					<dd>1.4.5 Vilken är den relativa sökvägen från filen top.html till bottom.html?</dd>
-					<dd><strong>Svar:</strong> bottom.html</dd>
-					<dd>1.4.6 Vilken är den relativa sökvägen från filen index.html till top.html</dd>
-					<dd><strong>Svar:</strong> html/pages/top.html alternativt /html/pages/top.html beroende på hur webbservern tolkar det</dd>
-				</dl>
-			</li>
-		</ol>
-		<h3>Uppgift 1.6</h3>
-		<p><a href="presentation.html#lyktstolpe">Vill du se en bild på mig?</a>!</p>
-		<p>Min logga är grymt snygg. <a href="../pics/logga.png">Här är min logga</a>?</p>
-		<p><a href="../index.html#minsvg">Min SVG har äntligen anlänt</a>!</p>
-		<h3>Uppgift 1.7</h3>
-		<p>Kolla <a href="../index.html#minvideo">min video</a>!</p>
-		<h2 id="lab2">Laboration 2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut diam sollicitudin nibh fringilla tristique. Cras et congue metus. Sed in erat ante. Etiam pellentesque vehicula arcu, at commodo tortor molestie nec. Maecenas ut velit eget massa luctus sagittis et a sem. Sed placerat mi et finibus aliquam. Suspendisse pulvinar dui sem, eu iaculis risus egestas ac.</p>
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<header>
+				<nav class="divide-5">
+					<!-- fa-rotate-90 -->
+					<span class="fa fa-2x fa-bars no-select"></span>
+				</nav>
+				<div class="divide-12">
+					<div class="logo">
+						<img src="../pics/logga.png" alt="Linus Logga" />
+					</div>
+				</div>
+				<div class="divide-82">
+					<div class="text-wrap">
+						<h1>Linus-inte-så-bra-site</h1>
+						<p>Min blog där jag publicerar dumheter</p>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="divide-15 nav">
+			<div id="nav">
+				<ul>
+					<li><a href="../index.html" title="index">Hem</a></li>
+					<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+					<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+					<li><a href="presentation.html" title="presentation">Presentation</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="divide-70 main">
+			<div id="container">
+				<main>
+					<h1>Laborationer</h1>
+					<h2>Webbproduktion</h2>
+					<ul>
+						<li><a href="#lab1">Laboration 1</a></li>
+						<li><a href="#lab2">Laboration 2</a></li>
+						<li><a href="#lab3">Laboration 3</a></li>
+					</ul>
+					<table border="1">
+						<colgroup span="4"></colgroup>
+						<tr>
+							<th>Laboration</th>
+							<th>Uppgift</th>
+							<th>Status</th>
+							<th>Redovisad</th>
+						</tr>
+						<tr>
+							<th>1</th>
+							<th>1.1</th>
+							<th>Färdig</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.2</th>
+							<th>Färdig</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.3</th>
+							<th>Färdig</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.4</th>
+							<th>Färdig</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.5</th>
+							<th>Färdig</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.6</th>
+							<th>Färdig</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.7</th>
+							<th>Färdig</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.8</th>
+							<th>Påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>1.9</th>
+							<th>Ej påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th>2</th>
+							<th>1</th>
+							<th>Ej påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>2</th>
+							<th>Ej påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>3</th>
+							<th>Ej påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>4</th>
+							<th>Ej påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>5</th>
+							<th>Ej påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>6</th>
+							<th>Ej påbörjad</th>
+							<th></th>
+						</tr>
+						<tr>
+							<th>Laborationsresultat gällande Linus Juhlin.</th>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</table>
+					<h2 id="lab1">Laboration 1</h2>
+					<ol>
+						<li>Frågor/Svar Uppgift 1.4
+							<dl>
+								<dt>Fråga först, sen svar</dt>
+								<dd>1.4.1 Vilken är den absoluta sökvägen till filen bottom.html?</dd>
+								<dd><strong>Svar:</strong> http://server.se/html/pages/bottom.html</dd>
+								<dd>1.4.2 Vilken är den relativa sökvägen från filen default.html till filen top.html?</dd>
+								<dd><strong>Svar:</strong> pages/top.html alternativt /pages/top.html beroende på hur webbservern tolkar det</dd>
+								<dd>1.4.3 Vilken är den relativa sökvägen från filen bottom.html till filen index.html?</dd>
+								<dd><strong>Svar:</strong> ../../index.html</dd>
+								<dd>1.4.4 Vilken är den absoluta sökvägen till filen index.html?</dd>
+								<dd><strong>Svar:</strong> http://server.se/index.html</dd>
+								<dd>1.4.5 Vilken är den relativa sökvägen från filen top.html till bottom.html?</dd>
+								<dd><strong>Svar:</strong> bottom.html</dd>
+								<dd>1.4.6 Vilken är den relativa sökvägen från filen index.html till top.html</dd>
+								<dd><strong>Svar:</strong> html/pages/top.html alternativt /html/pages/top.html beroende på hur webbservern tolkar det</dd>
+							</dl>
+						</li>
+					</ol>
+					<h3>Uppgift 1.6</h3>
+					<p><a href="presentation.html#lyktstolpe">Vill du se en bild på mig?</a>!</p>
+					<p>Min logga är grymt snygg. <a href="../pics/logga.png">Här är min logga</a>?</p>
+					<p><a href="../index.html#minsvg">Min SVG har äntligen anlänt</a>!</p>
+					<h3>Uppgift 1.7</h3>
+					<p>Kolla <a href="../index.html#minvideo">min video</a>!</p>
+					<h2 id="lab2">Laboration 2</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut diam sollicitudin nibh fringilla tristique. Cras et congue metus. Sed in erat ante. Etiam pellentesque vehicula arcu, at commodo tortor molestie nec. Maecenas ut velit eget massa luctus sagittis et a sem. Sed placerat mi et finibus aliquam. Suspendisse pulvinar dui sem, eu iaculis risus egestas ac.</p>
 
-		<p>Suspendisse ultricies malesuada urna ut lacinia. Nulla eget eros odio. Duis blandit mattis purus vitae bibendum. Phasellus posuere elementum neque, ut rhoncus nunc. Duis sodales diam eu purus lobortis tincidunt. Ut tempor faucibus ante, sed sagittis turpis imperdiet in. Cras quis elit ac dolor elementum egestas. Sed mollis mauris quis mi sollicitudin, eu convallis augue pulvinar. Nunc porta fermentum arcu, a consequat mauris cursus eget. Cras hendrerit augue eget nisi sollicitudin, vitae interdum elit consequat. Sed et turpis turpis. Vestibulum congue est vitae elementum elementum. Vestibulum nec pharetra sem.</p>
-		<h2 id="lab3">Laboration 3</h2>
-		Laboration
-	</main>
+					<p>Suspendisse ultricies malesuada urna ut lacinia. Nulla eget eros odio. Duis blandit mattis purus vitae bibendum. Phasellus posuere elementum neque, ut rhoncus nunc. Duis sodales diam eu purus lobortis tincidunt. Ut tempor faucibus ante, sed sagittis turpis imperdiet in. Cras quis elit ac dolor elementum egestas. Sed mollis mauris quis mi sollicitudin, eu convallis augue pulvinar. Nunc porta fermentum arcu, a consequat mauris cursus eget. Cras hendrerit augue eget nisi sollicitudin, vitae interdum elit consequat. Sed et turpis turpis. Vestibulum congue est vitae elementum elementum. Vestibulum nec pharetra sem.</p>
+					<h2 id="lab3">Laboration 3</h2>
+					Laboration
+				</main>
+			</div>
+		</div>
+		<div class="divide-15">
+		</div>
+	</div>
+	<script type="text/javascript" charset="utf-8" defer>
+		$(function() {
+			$('span.fa-bars').click(function() {
+				if ($('span.fa-bars').hasClass('rotate'))
+				{
+					$('span.fa-bars').css('transform', 'rotate(0deg)');
+					$('span.fa-bars').removeClass('rotate');
+					$('.nav').css('left', '-15%');
+				}
+				else
+				{
+					$('span.fa-bars').css('transform', 'rotate(90deg)');
+					$('span.fa-bars').addClass('rotate');
+					$('.nav').css('left', '0');
+				}
+			});
+		});
+	</script>
 </body>
 </html>

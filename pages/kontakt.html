@@ -4,57 +4,106 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Kontakt</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 </head>
 <body>
-	<header>
-		<h1>Linus-inte-så-bra-site</h1>
-		<nav>
-			<ul>
-				<li><a href="../index.html" title="index">Hem</a></li>
-				<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
-				<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
-				<li><a href="presentation.html" title="presentation">Presentation</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
-			<fieldset>
-				<legend>Kontakt</legend>
-				<p>
-					<label for="arende">Ärendetyp:</label> 
-					<select name="arende" id="arende">
-						<option value="fraga">Fråga</option>
-						<option value="annat">Annat</option>
-					</select>
-				</p>
-				<p>
-					<label for="rubrik">Rubrik:</label>
-					<input type="text" name="rubrik" id="rubrik">
-				</p>
-				<p>
-					<label for="body">Fråga:</label>
-					<textarea name="body" id="body"></textarea>
-				</p>
-				<p>
-					<label>Är du en Spam-bot?</label>
-						Ja: <input type="radio" name="spam" value="yes">
-						Kanske: <input type="radio" name="spam" value="maybe" checked>
-						Nej: <input type="radio" name="spam" value="no">
-				</p>
-				<p>
-					<label>Vad är din sexuella läggning?</label>
-					Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
-					Panter: <input type="checkbox" name="grp[]" value="panter" checked>
-					Get: <input type="checkbox" name="grp[]" value="get" checked>
-					Annat: <input type="checkbox" name="grp[]" value="annat">
-				</p>
-				<input type="submit" name="submit" value="submit">
-			</fieldset>
-		</form>
-	</main>
-	<footer>
-		<h3>Affärsrelaterade frågor samt allt annat mailas till: <a href="mailto:spam@p1raten.com">spam@p1raten.com</a></h3>
-	</footer>
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<header>
+				<nav class="divide-5">
+					<!-- fa-rotate-90 -->
+					<span class="fa fa-2x fa-bars"></span>
+				</nav>
+				<div class="divide-12">
+					<div class="logo">
+						<img src="../pics/logga.png" alt="Linus Logga" />
+					</div>
+				</div>
+				<div class="divide-82">
+					<div class="text-wrap">
+						<h1>Linus-inte-så-bra-site</h1>
+						<p>Min blog där jag publicerar dumheter</p>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="divide-15 nav">
+			<div id="nav">
+				<ul>
+					<li><a href="../index.html" title="index">Hem</a></li>
+					<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+					<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+					<li><a href="presentation.html" title="presentation">Presentation</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="divide-70 main">
+			<div id="container">
+				<main>
+					<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
+						<fieldset>
+							<legend>Kontakt</legend>
+							<p>
+								<label for="arende">Ärendetyp:</label> 
+								<select name="arende" id="arende">
+									<option value="fraga">Fråga</option>
+									<option value="annat">Annat</option>
+								</select>
+							</p>
+							<p>
+								<label for="rubrik">Rubrik:</label>
+								<input type="text" name="rubrik" id="rubrik">
+							</p>
+							<p>
+								<label for="body">Fråga:</label>
+								<textarea name="body" id="body"></textarea>
+							</p>
+							<p>
+								<label>Är du en Spam-bot?</label>
+								Ja: <input type="radio" name="spam" value="yes">
+								Kanske: <input type="radio" name="spam" value="maybe" checked>
+								Nej: <input type="radio" name="spam" value="no">
+							</p>
+							<p>
+								<label>Vad är din sexuella läggning?</label>
+								Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
+								Panter: <input type="checkbox" name="grp[]" value="panter" checked>
+								Get: <input type="checkbox" name="grp[]" value="get" checked>
+								Annat: <input type="checkbox" name="grp[]" value="annat">
+							</p>
+							<input type="submit" name="submit" value="submit">
+						</fieldset>
+					</form>
+				</main>
+				<footer>
+					<h3>Affärsrelaterade frågor samt allt annat mailas till: <a href="mailto:spam@p1raten.com">spam@p1raten.com</a></h3>
+				</footer>
+			</div>
+		</div>
+		<div class="divide-15"></div>
+	</div>
+	<script type="text/javascript" charset="utf-8" defer>
+		$(function() {
+			$('span.fa-bars').click(function() {
+				if ($('span.fa-bars').hasClass('rotate'))
+				{
+					$('span.fa-bars').css('transform', 'rotate(0deg)');
+					$('span.fa-bars').removeClass('rotate');
+					$('.nav').css('left', '-15%');
+				}
+				else
+				{
+					$('span.fa-bars').css('transform', 'rotate(90deg)');
+					$('span.fa-bars').addClass('rotate');
+					$('.nav').css('left', '0');
+				}
+			});
+		});
+	</script>
 </body>
 </html>

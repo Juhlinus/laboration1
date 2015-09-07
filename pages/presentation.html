@@ -5,75 +5,122 @@
 	<!-- Which IE version to use for this page -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Presentation</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
-	<header>
-		<h1>Linus-inte-så-bra-site</h1>
-		<h2>Min blog där jag publicerar dumheter</h2>
-		<nav>
-			<ul>
-				<li><a href="../index.html" title="index">Hem</a></li>
-				<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
-				<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
-				<li><a href="presentation.html" title="presentation">Presentation</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<h1>Linus Juhlin</h1>
-		<p>Hej! Mitt namn är Linus Juhlin och detta är min presentation!</p>
-		<h1>Om mig</h1>
-		<p>Nedan följer lite information om mig som person och lite vad jag är intresserad av.</p>
-		<h2>Programmering</h2>
-		<p>Nedan följer de programmeringsspråk som - vid just detta tillfälle - jag vill minnas att jag kan, i ingen specifik ordning. (I denna lista är även skriptingspråk inkluderade)</p>
-		<ol>
-			<li>C#</li>
-			<li>C+</li>
-			<li>Ruby</li>
-			<li>PHP</li>
-			<li>HTML</li>
-			<li>CSS</li>
-			<li>Javascript</li>
-			<li>Node.JS (se Javascript)</li>
-			<li>Lua</li>
-			<li>Pawn</li>
-		</ol>
-
-		<h2>Övrigt</h2>
-		<ul>
-			<li>Intressen
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<header>
+				<nav class="divide-5 no-select">
+					<!-- fa-rotate-90 -->
+					<span class="fa fa-2x fa-bars"></span>
+				</nav>
+				<div class="divide-12">
+					<div class="logo">
+						<img src="../pics/logga.png" alt="Linus Logga" />
+					</div>
+				</div>
+				<div class="divide-82">
+					<div class="text-wrap">
+						<h1>Linus-inte-så-bra-site</h1>
+						<p>Min blog där jag publicerar dumheter</p>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="divide-15 nav">
+			<div id="nav">
 				<ul>
-					<li>Spel</li>
-					<li>Programmera</li>
-					<li>Öl</li>
+					<li><a href="../index.html" title="index">Hem</a></li>
+					<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+					<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+					<li><a href="presentation.html" title="presentation">Presentation</a></li>
 				</ul>
-			</li>
-			<li>Familj
-				<ul>
-					<li>Mamma</li>
-					<li>Pappa</li>
-					<li>Bror</li>
-				</ul>
-			</li>
-		</ul>
-		<dl>
-			<dt>Guds gåva till programmerarna är </dt>
-			<dd>indentering</dd>
-			<dd> - Abraham Lincoln</dd>
-		</dl>
-	</main>
-	<footer>
-		<p><u>Disclaimer: Alla citat saknar källa</u></p>
-		
-		<p>
-			<a href="https://twitter.com/P1raten" title="Twitter">Twitter</a>
-			<a href="https://facebook.com/Linus.P1raten" title="Facebook">Facebook</a>
-			<a href="https://instagram.com/P1raten" title="Instagram">Instagram</a>
-		</p>
+			</div>
+		</div>
+		<div class="divide-70 main">
+			<div id="container">
+				<main>
+					<h1>Linus Juhlin</h1>
+					<p>Hej! Mitt namn är Linus Juhlin och detta är min presentation!</p>
+					<h1>Om mig</h1>
+					<p>Nedan följer lite information om mig som person och lite vad jag är intresserad av.</p>
+					<h2>Programmering</h2>
+					<p>Nedan följer de programmeringsspråk som - vid just detta tillfälle - jag vill minnas att jag kan, i ingen specifik ordning. (I denna lista är även skriptingspråk inkluderade)</p>
+					<ol>
+						<li>C#</li>
+						<li>C+</li>
+						<li>Ruby</li>
+						<li>PHP</li>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>Javascript</li>
+						<li>Node.JS (se Javascript)</li>
+						<li>Lua</li>
+						<li>Pawn</li>
+					</ol>
 
-		<div id="lyktstolpe"></div>
-		<img src="../pics/lyktstolpe.jpg" alt="Profilbild" width="200" />
-		<p>En bild på mig. Tråkigt nog är jag lika attraktiv som en lyktstolpe.</p>
-	</footer>
+					<h2>Övrigt</h2>
+					<ul>
+						<li>Intressen
+							<ul>
+								<li>Spel</li>
+								<li>Programmera</li>
+								<li>Öl</li>
+							</ul>
+						</li>
+						<li>Familj
+							<ul>
+								<li>Mamma</li>
+								<li>Pappa</li>
+								<li>Bror</li>
+							</ul>
+						</li>
+					</ul>
+					<dl>
+						<dt>Guds gåva till programmerarna är </dt>
+						<dd>indentering</dd>
+						<dd> - Abraham Lincoln</dd>
+					</dl>
+				</main>
+				<footer>
+					<p><u>Disclaimer: Alla citat saknar källa</u></p>
+
+					<p>
+						<a href="https://twitter.com/P1raten" title="Twitter">Twitter</a>
+						<a href="https://facebook.com/Linus.P1raten" title="Facebook">Facebook</a>
+						<a href="https://instagram.com/P1raten" title="Instagram">Instagram</a>
+					</p>
+
+					<div id="lyktstolpe"></div>
+					<img src="../pics/lyktstolpe.jpg" alt="Profilbild" width="200" />
+					<p>En bild på mig. Tråkigt nog är jag lika attraktiv som en lyktstolpe.</p>
+				</footer>
+			</div>
+		</div>
+		<div class="divide-15"></div>
+	</div>
+	<script type="text/javascript" charset="utf-8" defer>
+		$(function() {
+			$('span.fa-bars').click(function() {
+				if ($('span.fa-bars').hasClass('rotate'))
+				{
+					$('span.fa-bars').css('transform', 'rotate(0deg)');
+					$('span.fa-bars').removeClass('rotate');
+					$('.nav').css('left', '-15%');
+				}
+				else
+				{
+					$('span.fa-bars').css('transform', 'rotate(90deg)');
+					$('span.fa-bars').addClass('rotate');
+					$('.nav').css('left', '0');
+				}
+			});
+		});
+	</script>
 </body>
 </html>
