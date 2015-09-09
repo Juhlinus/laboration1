@@ -400,7 +400,14 @@ blockquote cite:before {
 footer
 {
 	display: block;
-	float: left;
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+}
+
+footer > p
+{
+	padding-bottom: 15px;
 }
 
 footer > ul > li
@@ -437,4 +444,30 @@ footer > ul > li > a
 .programming > p
 {
 	width: 90%;
+}
+
+.about
+{
+	margin-top: 20px;
+}
+
+.about > p
+{
+	margin: 10px;
+}
+
+.about > h1
+{
+	color: #5AAAFF;
+}
+
+.about h1,p
+{
+	margin: 0;
+}
+
+.about > img
+{
+	float: left;
+	padding-right: 15px;
 }
