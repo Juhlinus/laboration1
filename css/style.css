@@ -2,7 +2,12 @@
  *	Dividers
  */
 
-.divide-right
+.left
+{
+	float: left;
+}
+
+.right
 {
 	float: right;
 }
@@ -197,6 +202,13 @@ article > p
 	color: #A5A5A5;
 }
 
+article > img
+{
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+
 main > h1,h2
 {
 	color: #5AAAFF;
@@ -211,9 +223,9 @@ main > h2
 	font-weight: bold;
 }
 
-main p
+main a 
 {
-	color: #A5A5A5;
+	color: inherit;
 }
 
 main > ul
@@ -333,4 +345,14 @@ dd.question
 {
 	font-size: 18pt;
 	font-weight: bold;
+    color: #5AAAFF;
+    text-decoration: underline;
+}
+
+h3
+{
+	font-size: 18pt;
+	font-weight: bold;
+	color: #5AAAFF;
+    text-decoration: underline;
 }
