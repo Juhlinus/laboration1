@@ -102,7 +102,7 @@
 
 /*
  *	Other
- */
+ */r
 
 body, html, #wrapper
 {
@@ -199,7 +199,7 @@ article > h3
 
 article > p
 {
-	color: #A5A5A5;
+	color: #A0A0A0;
 }
 
 article > img
@@ -207,6 +207,11 @@ article > img
 	padding-right: 20px;
 	padding-left: 20px;
 	padding-bottom: 20px;
+}
+
+main
+{
+	float: left;
 }
 
 main > h1,h2
@@ -284,22 +289,19 @@ li
 	list-style: none;
 }
 
-#nav li
-{
-	padding: 15px;
-	padding-left: 25px;
-}
-
-#nav li:hover
-{
-	background: #E0E0E0;
-}
-
 #nav li > a
 {
 	font-size: 14pt;
 	text-decoration: none;
 	color: #5AAAFF;
+	display: block;
+	padding: 15px;
+	padding-left: 25px;
+}
+
+#nav li > a:hover
+{
+	background: #E0E0E0;
 }
 
 table
@@ -355,4 +357,84 @@ h3
 	font-weight: bold;
 	color: #5AAAFF;
     text-decoration: underline;
+}
+
+.active
+{
+	background-color: #F3F3F3;
+}
+
+blockquote {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-style: italic;
+	width: 500px;
+	margin: 0.25em 0;
+	padding: 0.25em 40px;
+	line-height: 1.45;
+	position: relative;
+	color: #383838;
+}
+
+blockquote:before {
+	display: block;
+	content: "\201C";
+	font-size: 80px;
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	color: #7a7a7a;
+}
+
+blockquote cite {
+	color: #999999;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+}
+
+blockquote cite:before {
+	content: "\2014 \2009";
+}
+
+footer
+{
+	display: block;
+	float: left;
+}
+
+footer > ul > li
+{
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+footer > ul > li > .facebook
+{
+	background-image: url("pics/social/facebook.png");
+}
+
+footer > ul > li > .twitter
+{
+	background-image: url("pics/social/twitter.png");
+}
+
+footer > ul > li > .instagram
+{
+	background-image: url("pics/social/instagram.png");
+}
+
+
+footer > ul > li > a
+{
+	display: block;
+	padding: 24px;
+}
+
+.programming > p
+{
+	width: 90%;
 }
