@@ -7,7 +7,7 @@
 	float: right;
 }
 
-.divide-5, .divide-9, .divide-10, .divide-12, .divide-15, .divide-20, .divide-30, .divide-40, .divide-50, .divide-70, .divide-75, .divide-83, .divide-90, .divide-100
+.divide-5, .divide-9, .divide-10, .divide-12, .divide-15, .divide-20, .divide-30, .divide-33, .divide-40, .divide-50, .divide-70, .divide-75, .divide-83, .divide-90, .divide-100
 {
 	display: inline;
 	float: left;
@@ -53,6 +53,11 @@
 .divide-30 
 {
 	width: 30%;
+}
+
+.divide-33
+{
+	width: 33%;
 }
 
 .divide-40 
@@ -200,9 +205,31 @@ main > h1,h2
 	margin: 15px auto;
 }
 
+main > h2
+{
+	font-size: 26pt;
+	font-weight: bold;
+}
+
 main p
 {
 	color: #A5A5A5;
+}
+
+main > ul
+{
+	padding-bottom: 45px;
+}
+
+main > ul > li
+{
+	font-size: 16pt;
+	display: inline;
+}
+
+main > ul > li > a
+{
+	color: #5AAAFF;
 }
 
 .main
@@ -210,7 +237,6 @@ main p
     float: left;
     display: block;
     margin: 0 auto;
-    padding-left: 20px;
 }
 
 .nav
@@ -264,6 +290,11 @@ li
 	color: #5AAAFF;
 }
 
+table
+{
+	width: 100%;
+}
+
 table *
 {
 	border-top: 1px solid #C3C3C3;
@@ -284,4 +315,22 @@ table th
 table td
 {
 	padding: 10px;
+}
+
+ol
+{
+	padding: 0;
+}
+
+dd
+{
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+dd.question
+{
+	font-size: 18pt;
+	font-weight: bold;
 }
