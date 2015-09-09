@@ -199,6 +199,7 @@ article > h3
 
 article > p
 {
+	margin-bottom: 20px;
 	color: #A0A0A0;
 }
 
@@ -212,6 +213,13 @@ article > img
 main
 {
 	float: left;
+}
+
+main.contact
+{
+	float: none;
+	margin: 0 auto;
+	width: 600px;
 }
 
 main > h1,h2
@@ -470,4 +478,45 @@ footer > ul > li > a
 {
 	float: left;
 	padding-right: 15px;
+}
+
+.contact > form
+{
+	border-radius: 15px;
+	background-color: white;
+}
+
+.contact > form > fieldset
+{
+	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.contact > form > fieldset > legend
+{
+    padding-top: 10px;
+    font-size: 24pt;
+}
+
+.contact > form > fieldset > select, #rubrik, #body
+{
+	width: 350px;
+}
+
+.contact > form > fieldset > label, select, #rubrik, #body, input[type="submit"]
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.wider
+{
+	width: 500px;
+}
+
+footer h3 > a
+{
+	color: inherit;
 }

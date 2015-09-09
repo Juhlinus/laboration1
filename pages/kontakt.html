@@ -43,43 +43,33 @@
 		</div>
 		<div class="divide-70 main">
 			<div id="container">
-				<main>
-					<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
-						<fieldset>
-							<legend>Kontakt</legend>
-							<p>
-								<label for="arende">Ärendetyp:</label> 
-								<select name="arende" id="arende">
-									<option value="fraga">Fråga</option>
-									<option value="annat">Annat</option>
-								</select>
-							</p>
-							<p>
-								<label for="rubrik">Rubrik:</label>
-								<input type="text" name="rubrik" id="rubrik">
-							</p>
-							<p>
-								<label for="body">Fråga:</label>
-								<textarea name="body" id="body"></textarea>
-							</p>
-							<p>
-								<label>Är du en Spam-bot?</label>
-								Ja: <input type="radio" name="spam" value="yes">
-								Kanske: <input type="radio" name="spam" value="maybe" checked>
-								Nej: <input type="radio" name="spam" value="no">
-							</p>
-							<p>
-								<label>Vad är din sexuella läggning?</label>
-								Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
-								Panter: <input type="checkbox" name="grp[]" value="panter" checked>
-								Get: <input type="checkbox" name="grp[]" value="get" checked>
-								Annat: <input type="checkbox" name="grp[]" value="annat">
-							</p>
-							<input type="submit" name="submit" value="submit">
-						</fieldset>
-					</form>
-				</main>
-				<footer>
+				<div class="divide-100">
+					<main class="contact">
+						<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
+							<fieldset>
+								<legend>Kontakt</legend>
+									<select name="arende" id="arende">
+										<option value="" disabled  selected>Ärendetyp</option>
+										<option value="fraga">Fråga</option>
+										<option value="annat">Annat</option>
+									</select>
+									<input type="text" name="rubrik" id="rubrik" placeholder="Rubrik">
+									<textarea name="body" id="body" placeholder="Meddelande"></textarea>
+									<label>Är du en Spam-bot?</label>
+									Ja: <input type="radio" name="spam" value="yes">
+									Kanske: <input type="radio" name="spam" value="maybe" checked>
+									Nej: <input type="radio" name="spam" value="no">
+									<label>Vad är din sexuella läggning?</label>
+									Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
+									Panter: <input type="checkbox" name="grp[]" value="panter" checked>
+									Get: <input type="checkbox" name="grp[]" value="get" checked>
+									Annat: <input type="checkbox" name="grp[]" value="annat">
+								<input type="submit" name="submit" value="submit">
+							</fieldset>
+						</form>
+					</main>
+				</div>
+				<footer class="wider">
 					<h3>Affärsrelaterade frågor samt allt annat mailas till: <a href="mailto:spam@p1raten.com">spam@p1raten.com</a></h3>
 				</footer>
 			</div>
