@@ -35,5 +35,15 @@ nav
 
 .text-wrap
 {
-	top: 47px;
+	top: 36px;
+}
+
+.text-wrap > h1
+{
+	font-size: 36pt;
+}
+
+.text-wrap > p
+{
+	font-size: 16pt;
 }
