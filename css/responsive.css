@@ -2,3 +2,38 @@ article > img
 {
 	max-width: 50%;
 }
+
+header
+{
+	height: 150px;
+}
+
+.fa.fa-2x
+{
+	font-size: 3em;
+}
+
+.divide-5
+{
+	width: 10%;
+}
+
+.divide-12
+{
+	width: 19%;
+}
+
+nav
+{
+	margin-top: 51px;
+}
+
+.logo
+{
+	top: 59px;
+}
+
+.text-wrap
+{
+	top: 47px;
+}
