@@ -47,3 +47,8 @@ nav
 {
 	font-size: 16pt;
 }
+
+article > h2
+{
+	font-size: 36pt;
+}
