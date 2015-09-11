@@ -520,3 +520,13 @@ footer h3 > a
 {
 	color: inherit;
 }
+
+article > img
+{
+	max-width: 100%;
+}
+
+article > img.half
+{
+	max-width: 50%;
+}
