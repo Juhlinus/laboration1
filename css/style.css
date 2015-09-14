@@ -595,5 +595,5 @@ li.presentation:hover
 span dd
 {
 	padding-right: 15px;
-	word-break: break-word;
+	word-wrap: break-word;
 }
