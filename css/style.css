@@ -591,3 +591,9 @@ li.presentation:hover
 {
 	padding-left: 50px;
 }
+
+span dd
+{
+	padding-right: 15px;
+	word-break: break-word;
+}
