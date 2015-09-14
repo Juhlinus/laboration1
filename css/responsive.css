@@ -52,3 +52,15 @@ article > h2
 {
 	font-size: 36pt;
 }
+
+.contact > form > fieldset > select, #rubrik, #body 
+{
+	font-size: 24pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contact > form > fieldset > label
+{
+	font-size: 16pt;
+}
