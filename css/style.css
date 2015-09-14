@@ -183,10 +183,16 @@ nav > ul
     -ms-transition: transform 0.4s ease;
     -moz-transition: transform 0.4s ease;
     -webkit-transition: transform 0.4s ease;
+    /*
+     * CSS3
+     * Tell browser that this will eventually transform 
+     */
+    will-change: transform;
 }
 
 article
 {
+	box-sizing: border-box;
 	border-bottom: 1px dotted gray;
 }
 
@@ -318,11 +324,13 @@ table
 
 table tr
 {
+	box-sizing: border-box;
 	border-bottom: 1px solid #C3C3C3;
 }
 
 tbody
 {
+	box-sizing: border-box;
 	border: 1px solid #C3C3C3;
 }
 
@@ -595,5 +603,5 @@ li.presentation:hover
 span dd
 {
 	padding-right: 15px;
-	word-wrap: break-word;
+	text-overflow: ellipsis;
 }
