@@ -600,7 +600,7 @@ li.presentation:hover
 	padding-left: 50px;
 }
 
-span dd
+dl dt
 {
 	padding-right: 15px;
 	text-overflow: ellipsis;
