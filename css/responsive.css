@@ -1,0 +1,152 @@
+#header-wrapper
+{
+	min-width: 650px;
+	position: relative;
+	left: -30px;
+}
+
+.main
+{
+	float: none;
+	display: inline-block;
+	min-width: 265px;
+}
+
+#nav
+{
+	min-width: 135px;
+}
+
+.nav
+{
+	float: none;
+	display: inline-block;
+	min-width: 135px;
+}
+
+.nav li a
+{
+	padding-left: 12.5px;
+}
+
+span.fa.fa-2x.fa-bars.no-select
+{
+	position: relative;
+	left: 45px; 
+}
+
+.divide-5
+{
+	width: 13.5%;
+}
+
+.divide-12
+{
+	min-width: 95px;
+}
+
+header
+{
+	margin: 0;
+	width: 100%;
+}
+
+.logo
+{
+	top: 41px;
+}
+
+.logo img
+{
+	width: 80px;
+}
+
+.min-mobile-width
+{
+	min-width: 460px;
+}
+
+article > img
+{
+	width: 60%;
+}
+
+article > img.left
+{
+	padding-left: 0px;
+}
+
+.navigation
+{
+	width: 150px;
+}
+
+.navigation li > a
+{
+	font-size: 14pt;
+	text-decoration: none;
+	color: #5AAAFF;
+	display: block;
+	padding: 15px;
+	padding-left: 35px;
+	
+	transition: display 0.4s ease;
+    -ms-transition: display 0.4s ease;
+    -moz-transition: display 0.4s ease;
+    -webkit-transition: display 0.4s ease;	
+}
+
+.content
+{
+	width: 300px;
+}
+
+.navigation.marg-left
+{
+	margin-left: -130px;
+}
+
+.contact > form > fieldset > label, select, #rubrik, #body, input[type="submit"]
+{
+	width: 100%;
+}
+
+table td
+{
+	padding: 0;
+}
+
+ul > .divide-33
+{
+	width: 100%
+}
+
+.text-wrap > h1
+{
+	font-size: 1.75em;
+}
+
+.text-wrap > p
+{
+	font-size: 0.85em;
+}
+
+main > .divide-33
+{
+	width: 100%;
+}
+
+main
+{
+	width: 100%;
+}
+
+blockquote
+{
+	width: 90%;
+}
+
+video
+{
+	width: 100%;
+}

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Laborationer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" media="screen and (max-width:480px)" href="../css/responsive.css">	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 </head>
 <body>
 	<div id="wrapper">
@@ -30,18 +34,16 @@
 				</div>
 			</header>
 		</div>
-		<div class="divide-15 nav">
-			<div id="nav">
+		<div class="divide-100 min-mobile-width">
+			<div class="divide-15 navigation">
 				<ul>
-					<li><a href="../index.html" title="index">Hem</a></li>
-					<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
-					<li><a href="laborationer.html" title="laborationer" class="active">Laborationer</a></li>
-					<li><a href="presentation.html" title="presentation">Presentation</a></li>
+					<li class="home"><a href="../index.html" title="index">Hem</a></li>
+					<li class="contact"><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+					<li class="active labs"><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+					<li class="presentation"><a href="presentation.html" title="presentation">Presentation</a></li>
 				</ul>
 			</div>
-		</div>
-		<div class="divide-70 main">
-			<div id="container">
+			<div class="divide-85 content">
 				<main>
 					<h1>Laborationer</h1>
 					<h2>Webbproduktion</h2>
@@ -57,120 +59,96 @@
 						</li>
 					</ul>
 					<table>
-						<colgroup span="4"></colgroup>
+						<colgroup span="3"></colgroup>
 						<tr>
 							<th>Laboration</th>
 							<th>Uppgift</th>
 							<th>Status</th>
-							<th>Redovisad</th>
 						</tr>
 						<tr>
 							<td>Laboration 1</td>
 							<td>1.1</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.2</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.3</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.4</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.5</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.6</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.7</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.8</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>1.9</td>
 							<td>Färdig</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td>Laboration 2</td>
 							<td>2.1</td>
 							<td>Påbörjad</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>2.2</td>
 							<td>Påbörjad</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>2.3</td>
 							<td>Påbörjad</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>2.4</td>
 							<td>Påbörjad</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>2.5</td>
 							<td>Påbörjad</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>2.6</td>
 							<td>Påbörjad</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>2.7</td>
 							<td>Påbörjad</td>
-							<td></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td>2.8</td>
 							<td>Påbörjad</td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>Laborationsresultat gällande Linus Juhlin.</td>
-							<td></td>
-							<td></td>
-							<td></td>
 						</tr>
 					</table>
 					<h2 id="lab1">Laboration 1</h2>
@@ -242,23 +220,29 @@
 				</main>
 			</div>
 		</div>
-		<div class="divide-15">
-		</div>
 	</div>
 	<script type="text/javascript">
 		$(function() {
 			$('span.fa-bars').click(function() {
-				if ($('span.fa-bars').hasClass('rotate'))
+				if (!$('span.fa-bars').hasClass('rotate'))
 				{
 					$('span.fa-bars').css('transform', 'rotate(0deg)');
-					$('span.fa-bars').removeClass('rotate');
-					$('.nav').css('left', '-15%');
+					$('span.fa-bars').addClass('rotate');
+					$('.navigation').addClass('marg-left');
+
+					setTimeout(function() {
+						$('.navigation li > a').css('display', 'none');
+						$('.content').addClass('maximum-width');
+					}, 350);
 				}
 				else
 				{
 					$('span.fa-bars').css('transform', 'rotate(90deg)');
-					$('span.fa-bars').addClass('rotate');
-					$('.nav').css('left', '0');
+					$('span.fa-bars').removeClass('rotate');
+					
+					$('.content').removeClass('maximum-width');
+					$('.navigation li > a').css('display', 'block');
+					$('.navigation').removeClass('marg-left');
 				}
 			});
 		});

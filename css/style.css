@@ -11,7 +11,7 @@
 	float: right;
 }
 
-.divide-5, .divide-9, .divide-10, .divide-12, .divide-15, .divide-20, .divide-30, .divide-33, .divide-40, .divide-50, .divide-70, .divide-75, .divide-83, .divide-90, .divide-100
+.divide-5, .divide-9, .divide-10, .divide-12, .divide-15, .divide-20, .divide-30, .divide-33, .divide-35, .divide-40, .divide-50, .divide-65, .divide-70, .divide-75, .divide-83, .divide-85, .divide-90, .divide-100
 {
 	display: inline;
 	float: left;
@@ -64,6 +64,11 @@
 	width: 33%;
 }
 
+.divide-35
+{
+	width: 35%;
+}
+
 .divide-40 
 {
 	width: 40%;
@@ -72,6 +77,11 @@
 .divide-50 
 {
 	width: 50%;
+}
+
+.divide-65
+{
+	width: 65%;
 }
 
 .divide-70
@@ -87,6 +97,11 @@
 .divide-83
 {
 	width: 83%;
+}
+
+.divide-85
+{
+	width: 85%;
 }
 
 .divide-90 
@@ -117,7 +132,9 @@ body, html, #wrapper
 
 #header-wrapper
 {
+	min-width: 650px;
 	background-color: rgb(85, 169, 255);
+	width: 100%;
 }
 
 header
@@ -178,6 +195,7 @@ nav > ul
 
 .fa-bars
 {
+	transform: rotate(90deg);
 	color: white;
 	transition: transform 0.4s ease;
     -ms-transition: transform 0.4s ease;
@@ -269,7 +287,7 @@ main > ul > li > a
     position: relative;
     height: calc(100% - 110px);
     float: left;
-    left: -15%;
+    left: -150px;
     transition: left 0.4s ease;
     -ms-transition: left 0.4s ease;
     -moz-transition: left 0.4s ease;
@@ -518,4 +536,93 @@ footer > ul > li > a
 footer h3 > a
 {
 	color: inherit;
+}
+
+
+.content.maximum-width
+{
+	transition: width 0.4s ease;
+    -ms-transition: width 0.4s ease;
+    -moz-transition: width 0.4s ease;
+    -webkit-transition: width 0.4s ease;
+	width: 100%;
+}
+
+.navigation li > a
+{
+	font-size: 14pt;
+	text-decoration: none;
+	color: #5AAAFF;
+	display: block;
+	padding: 15px;
+	padding-left: 35px;
+}
+
+.navigation
+{
+	transition: margin-left 0.4s ease;
+    -ms-transition: margin-left 0.4s ease;
+    -moz-transition: margin-left 0.4s ease;
+    -webkit-transition: margin-left 0.4s ease;	
+}
+
+.navigation.marg-left
+{
+	margin-left: -15%;
+	transition: margin-left 0.4s ease;
+    -ms-transition: margin-left 0.4s ease;
+    -moz-transition: margin-left 0.4s ease;
+    -webkit-transition: margin-left 0.4s ease;	
+
+}
+
+label
+{
+	display: block;
+}
+
+.navigation > ul > li
+{
+	background-image: url("pics/sprite.png");
+	background-repeat: no-repeat;
+}
+
+li.home
+{
+	background-position: 5px 12.5px;
+}
+
+li.contact
+{
+	background-position: 5px -276px ;
+}
+
+li.labs
+{
+	background-position: 5px -84px;
+}
+
+li.presentation
+{
+	background-position: 5px -179px;
+}
+
+li.home:hover
+{
+	background-position: 5px -36.5px;
+}
+
+li.contact:hover
+{
+	background-position: 5px -324px;
+}
+
+li.labs:hover
+{
+	background-position: 5px -132px;
+}
+
+li.presentation:hover
+{
+	background-position: 5px -227px;
 }

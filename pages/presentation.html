@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html>
 <head>
 	<meta charset="utf-8">
-	<!-- Which IE version to use for this page -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Presentation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" media="screen and (max-width:480px)" href="../css/responsive.css">	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 </head>
 <body>
 	<div id="wrapper">
 		<div id="header-wrapper">
 			<header>
 				<nav class="divide-5 no-select">
-					<span class="fa fa-2x fa-bars"></span>
+					<span class="fa fa-2x fa-bars no-select"></span>
 				</nav>
 				<div class="divide-12">
 					<div class="logo">
@@ -31,17 +34,95 @@
 				</div>
 			</header>
 		</div>
-		<div class="divide-15 nav">
-			<div id="nav">
+		<div class="divide-100 min-mobile-width">
+			<div class="divide-15 navigation">
 				<ul>
-					<li><a href="../index.html" title="index">Hem</a></li>
-					<li><a href="kontakt.html" title="kontakt">Kontakt</a></li>
-					<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
-					<li><a href="presentation.html" title="presentation" class="active">Presentation</a></li>
+					<li class="home"><a href="../index.html" title="index">Hem</a></li>
+					<li class="contact"><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+					<li class="labs"><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+					<li class="active presentation"><a href="presentation.html" title="presentation">Presentation</a></li>
 				</ul>
 			</div>
+			<div class="divide-85 content">
+				<main>
+					<div class="divide-100 about">
+						<div id="lyktstolpe"></div>
+						<img src="../pics/lyktstolpe.jpg" alt="Profilbild" width="150" />
+						<h1>Linus Juhlin</h1>
+						<p>Hej! Mitt namn är Linus Juhlin och detta är min presentation!</p>
+						<p>En bild på mig.</p> 
+						<p>Tråkigt nog är jag lika attraktiv som en lyktstolpe.</p>
+					</div>
+					<div class="divide-33 programming">
+						<h2>Programmering</h2>
+						<p>Nedan följer de programmeringsspråk som - vid just detta tillfälle - jag vill minnas att jag kan, i ingen specifik ordning. (I denna lista är även skriptingspråk inkluderade)</p>
+						<ol class="divide-50">
+							<li>C#</li>
+							<li>C+</li>
+							<li>Ruby</li>
+							<li>PHP</li>
+							<li>HTML</li>
+						</ol>
+						<ol class="divide-50">
+							<li>CSS</li>
+							<li>Javascript</li>
+							<li>Node.JS (se Javascript)</li>
+							<li>Lua</li>
+							<li>Pawn</li>
+						</ol>
+					</div>
+					<div class="divide-33 other">
+						<h2>Övrigt</h2>
+						<p>Här kan du hitta lite övrig information angående mig som jag inte riktigt visste vart annars någonstans jag skulle placera det.</p>
+						<br />
+						<ul class="divide-50">
+							<li><strong>Intressen</strong>
+								<ul>
+									<li>Spel</li>
+									<li>Programmera</li>
+									<li>Öl</li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="divide-50">
+							<li><strong>Familj</strong>
+								<ul>
+									<li>Mamma</li>
+									<li>Pappa</li>
+									<li>Bror</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="divide-33">
+						<h2>Citat</h2>
+						<p>Här är lite citat som jag funderar på när jag känner mig nere.</p>
+						<blockquote>
+							<p>Guds gåva till programmerarna är indentering</p>
+							<cite>Abraham Lincoln</cite>
+						</blockquote>
+						<blockquote>
+							<p>I'm not just sure, I'm HIV positive.</p>
+							<cite>Eric Cartman</cite>
+						</blockquote>
+						<blockquote>
+							<p>Nein, nein, nein, nein, nein, nein, nein.</p>
+							<cite>Adolf Hitler</cite>
+						</blockquote>
+					</div>
+				</main>
+				<footer>
+					<p><u>Disclaimer: Alla citat saknar källa</u></p>
+					<ul>
+						<li><a class="twitter" href="https://twitter.com/P1raten" title="Twitter"></a></li>
+						<li><a class="facebook" href="https://facebook.com/Linus.P1raten" title="Facebook"></a></li>
+						<li><a class="instagram" href="https://instagram.com/P1raten" title="Instagram"></a></li>
+					</ul>
+				</footer>
+			</div>
 		</div>
-		<div class="divide-70 main">
+	</div>
+	<!--	<div class="divide-70 main">
 			<div id="container">
 				<main>
 					<div class="divide-100 about">
@@ -139,6 +220,32 @@
 				}
 			});
 		});
-	</script>
+	</script>-->
+	<script type="text/javascript">
+			$(function() {
+				$('span.fa-bars').click(function() {
+					if (!$('span.fa-bars').hasClass('rotate'))
+					{
+						$('span.fa-bars').css('transform', 'rotate(0deg)');
+						$('span.fa-bars').addClass('rotate');
+						$('.navigation').addClass('marg-left');
+
+						setTimeout(function() {
+							$('.navigation li > a').css('display', 'none');
+							$('.content').addClass('maximum-width');
+						}, 350);
+					}
+					else
+					{
+						$('span.fa-bars').css('transform', 'rotate(90deg)');
+						$('span.fa-bars').removeClass('rotate');
+						
+						$('.content').removeClass('maximum-width');
+						$('.navigation li > a').css('display', 'block');
+						$('.navigation').removeClass('marg-left');
+					}
+				});
+			});
+		</script>
 </body>
 </html>

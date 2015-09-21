@@ -3,10 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Kontakt</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" media="screen and (max-width:480px)" href="../css/responsive.css">	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -16,7 +19,7 @@
 		<div id="header-wrapper">
 			<header>
 				<nav class="divide-5 no-select">
-					<span class="fa fa-2x fa-bars"></span>
+					<span class="fa fa-2x fa-bars no-select"></span>
 				</nav>
 				<div class="divide-12">
 					<div class="logo">
@@ -31,68 +34,68 @@
 				</div>
 			</header>
 		</div>
-		<div class="divide-15 nav">
-			<div id="nav">
+		<div class="divide-100 min-mobile-width">
+			<div class="divide-15 navigation">
 				<ul>
-					<li><a href="../index.html" title="index">Hem</a></li>
-					<li><a href="kontakt.html" title="kontakt" class="active">Kontakt</a></li>
-					<li><a href="laborationer.html" title="laborationer">Laborationer</a></li>
-					<li><a href="presentation.html" title="presentation">Presentation</a></li>
+					<li class="home"><a href="../index.html" title="index">Hem</a></li>
+					<li class="active contact"><a href="kontakt.html" title="kontakt">Kontakt</a></li>
+					<li class="labs"><a href="laborationer.html" title="laborationer">Laborationer</a></li>
+					<li class="presentation"><a href="presentation.html" title="presentation">Presentation</a></li>
 				</ul>
 			</div>
-		</div>
-		<div class="divide-70 main">
-			<div id="container">
-				<div class="divide-100">
-					<main class="contact">
-						<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
-							<fieldset>
-								<legend>Kontakt</legend>
-									<select name="arende" id="arende">
-										<option value="" disabled  selected>Ärendetyp</option>
-										<option value="fraga">Fråga</option>
-										<option value="annat">Annat</option>
-									</select>
-									<input type="text" name="rubrik" id="rubrik" placeholder="Rubrik">
-									<textarea name="body" id="body" placeholder="Meddelande"></textarea>
-									<label>Är du en Spam-bot?</label>
-									Ja: <input type="radio" name="spam" value="yes">
-									Kanske: <input type="radio" name="spam" value="maybe" checked>
-									Nej: <input type="radio" name="spam" value="no">
-									<label>Vad är din sexuella läggning?</label>
-									Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
-									Panter: <input type="checkbox" name="grp[]" value="panter" checked>
-									Get: <input type="checkbox" name="grp[]" value="get" checked>
-									Annat: <input type="checkbox" name="grp[]" value="annat">
-								<input type="submit" name="submit" value="submit">
-							</fieldset>
-						</form>
-					</main>
-				</div>
-				<footer class="wider">
-					<h3>Affärsrelaterade frågor samt allt annat mailas till: <a href="mailto:spam@p1raten.com">spam@p1raten.com</a></h3>
-				</footer>
+			<div class="divide-85 content">
+				<form action="http://localhost/form/index.php" method="post" accept-charset="utf-8">
+					<fieldset>
+						<legend>Kontakt</legend>
+						<select name="arende" id="arende">
+							<option value="" disabled  selected>Ärendetyp</option>
+							<option value="fraga">Fråga</option>
+							<option value="annat">Annat</option>
+						</select>
+						<input type="text" name="rubrik" id="rubrik" placeholder="Rubrik">
+						<textarea name="body" id="body" placeholder="Meddelande"></textarea>
+						<label>Är du en Spam-bot?</label>
+						Ja: <input type="radio" name="spam" value="yes">
+						Kanske: <input type="radio" name="spam" value="maybe" checked>
+						Nej: <input type="radio" name="spam" value="no">
+						<label>Vad är din sexuella läggning?</label>
+						Kamel: <input type="checkbox" name="grp[]" value="kamel" checked>
+						Panter: <input type="checkbox" name="grp[]" value="panter" checked>
+						Get: <input type="checkbox" name="grp[]" value="get" checked>
+						Annat: <input type="checkbox" name="grp[]" value="annat">
+						<input type="submit" name="submit" value="submit">
+					</fieldset>
+				</form>
 			</div>
+			<footer class="wider">
+				<h3>Affärsrelaterade frågor samt allt annat mailas till: <a href="mailto:spam@p1raten.com">spam@p1raten.com</a></h3>
+			</footer>
 		</div>
-		<div class="divide-15"></div>
-	</div>
-	<script type="text/javascript">
-		$(function() {
-			$('span.fa-bars').click(function() {
-				if ($('span.fa-bars').hasClass('rotate'))
-				{
-					$('span.fa-bars').css('transform', 'rotate(0deg)');
-					$('span.fa-bars').removeClass('rotate');
-					$('.nav').css('left', '-15%');
-				}
-				else
-				{
-					$('span.fa-bars').css('transform', 'rotate(90deg)');
-					$('span.fa-bars').addClass('rotate');
-					$('.nav').css('left', '0');
-				}
+		<script type="text/javascript">
+			$(function() {
+				$('span.fa-bars').click(function() {
+					if (!$('span.fa-bars').hasClass('rotate'))
+					{
+						$('span.fa-bars').css('transform', 'rotate(0deg)');
+						$('span.fa-bars').addClass('rotate');
+						$('.navigation').addClass('marg-left');
+
+						setTimeout(function() {
+							$('.navigation li > a').css('display', 'none');
+							$('.content').addClass('maximum-width');
+						}, 350);
+					}
+					else
+					{
+						$('span.fa-bars').css('transform', 'rotate(90deg)');
+						$('span.fa-bars').removeClass('rotate');
+
+						$('.content').removeClass('maximum-width');
+						$('.navigation li > a').css('display', 'block');
+						$('.navigation').removeClass('marg-left');
+					}
+				});
 			});
-		});
-	</script>
-</body>
-</html>
+		</script>
+	</body>
+	</html>

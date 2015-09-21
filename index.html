@@ -3,11 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
 	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" media="screen and (max-width:480px)" href="css/responsive.css">	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 	<title>Index</title>
@@ -32,18 +35,16 @@
 				</div>
 			</header>
 		</div>
-		<div class="divide-15 nav">
-			<div id="nav">
+		<div class="divide-100 min-mobile-width">
+			<div class="divide-15 navigation">
 				<ul>
-					<li><a href="index.html" title="index" class="active">Hem</a></li>
-					<li><a href="pages/kontakt.html" title="kontakt">Kontakt</a></li>
-					<li><a href="pages/laborationer.html" title="laborationer">Laborationer</a></li>
-					<li><a href="pages/presentation.html" title="presentation">Presentation</a></li>
+					<li class="active home"><a href="index.html" title="index">Hem</a></li>
+					<li class="contact"><a href="pages/kontakt.html" title="kontakt">Kontakt</a></li>
+					<li class="labs"><a href="pages/laborationer.html" title="laborationer">Laborationer</a></li>
+					<li class="presentation"><a href="pages/presentation.html" title="presentation">Presentation</a></li>
 				</ul>
 			</div>
-		</div>
-		<div class="divide-70 main">
-			<div id="container">
+			<div class="divide-85 content">
 				<article>
 					<h2>Tja tja bloggen!</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo eu velit in sodales. Vivamus non ante blandit, fermentum urna non, auctor purus. Suspendisse ac tempus lacus. Donec feugiat erat ac dui convallis, vel lacinia mauris cursus. Praesent a est efficitur dolor porta feugiat vel eget lectus. Aliquam mauris erat, ultricies vitae mi quis, varius tincidunt ligula. Mauris sit amet nulla lacinia, tempor augue in, tempus tortor. Sed sagittis mi ut eleifend condimentum. Integer sagittis ut libero id iaculis. Nulla facilisi. Proin augue felis, dictum at justo eget, luctus lacinia purus.</p>
@@ -92,26 +93,31 @@
 				</article>
 			</div>
 		</div>
-		<div class="divide-15">
-		</div>
-	</div>
-	<script type="text/javascript">
-		$(function() {
-			$('span.fa-bars').click(function() {
-				if ($('span.fa-bars').hasClass('rotate'))
-				{
-					$('span.fa-bars').css('transform', 'rotate(0deg)');
-					$('span.fa-bars').removeClass('rotate');
-					$('.nav').css('left', '-15%');
-				}
-				else
-				{
-					$('span.fa-bars').css('transform', 'rotate(90deg)');
-					$('span.fa-bars').addClass('rotate');
-					$('.nav').css('left', '0');
-				}
+		<script type="text/javascript">
+			$(function() {
+				$('span.fa-bars').click(function() {
+					if (!$('span.fa-bars').hasClass('rotate'))
+					{
+						$('span.fa-bars').css('transform', 'rotate(0deg)');
+						$('span.fa-bars').addClass('rotate');
+						$('.navigation').addClass('marg-left');
+
+						setTimeout(function() {
+							$('.navigation li > a').css('display', 'none');
+							$('.content').addClass('maximum-width');
+						}, 350);
+					}
+					else
+					{
+						$('span.fa-bars').css('transform', 'rotate(90deg)');
+						$('span.fa-bars').removeClass('rotate');
+
+						$('.content').removeClass('maximum-width');
+						$('.navigation li > a').css('display', 'block');
+						$('.navigation').removeClass('marg-left');
+					}
+				});
 			});
-		});
-	</script>
-</body>
-</html>
+		</script>
+	</body>
+	</html>
