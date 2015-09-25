@@ -626,3 +626,37 @@ li.presentation:hover
 {
 	background-position: 5px -227px;
 }
+
+@media screen and (max-width: 915px) {
+
+	#header-wrapper
+	{
+		min-width: 775px;
+		position: relative;
+		left: -30px;
+	}
+
+	.main
+	{
+		float: none;
+		display: inline-block;
+		min-width: 265px;
+	}
+
+	#nav
+	{
+		min-width: 135px;
+	}
+
+	.nav
+	{
+		float: none;
+		display: inline-block;
+		min-width: 135px;
+	}
+
+	.min-mobile-width
+	{
+		min-width: 920px;
+	}
+}
