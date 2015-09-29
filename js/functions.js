@@ -38,44 +38,109 @@ console.log(skrivUt("test", "testwoo", "testiiiee"));
 /*
  *	Uppgift 3.1
  */
-var rand = Math.floor(Math.random() * (100 - 0 + 1) + 0);
+function guessingGame() {
 
-var input = prompt("Guess a number, I'm think of a number between 1 and 100");
+	var rand = Math.floor(Math.random() * (100 - 0 + 1) + 0);
 
-var winning = false;
+	console.log(rand);
 
-if ((input - 0) === (rand - 0))
-	winning = true;
-else
-{
-	var incrementer = 0;
+	var userInput;
 
-	while (input !== rand) 
+	var tries = 0;
+
+	do 
 	{
-		if (input < rand)
-			alert(input + " is not the correct number. My number is higher.");
-		else
-			alert(input + " is not the correct number. My number is lower.");
+		userInput = prompt("Guess a number between 1-100");
 
-		input = prompt("Guess my number.");
+		if (userInput > rand)
+			alert("Your guess " + userInput + " was too high.");
+		else if (userInput < rand)
+			alert("Your guess " + userInput + " was too low");
 
-		incrementer += 1;
+		tries += 1;
 
-		if ((input - 0) === (rand - 0))
-		{
-			winning = true;
+	} while (userInput.toString() !== rand.toString());
+
+	alert("Congratufuckinglations, it took you " + (tries === 1 ? (tries + " try") : (tries + " tries")) + " and the secret number was " + rand + ".");
+}
+
+/*
+ *	Uppgift 4
+ */
+var isLooping = true;
+
+while (isLooping)
+{
+	var userInput = prompt("0. Exit\n\n1. Fahrenheit to Celsius\n2. Celsius to Fahrenheit\n3. Guess number");
+
+	switch (userInput)
+	{
+		case '0':
+			isLooping = false;
 			break;
-		}
-		else if (incrementer === 4)
+
+		case '1':
+			var fahrenheit = prompt("Input fahrenheit you want to convert to celsius.");
+			var result = fahrenheitToCelsius(fahrenheit);
+			alert(fahrenheit + " fahrenheit converted to celsius is " + result);
+			break;
+
+		case '2':
+			var celsius = prompt("Input celsius you want to convert to fahrenheit.");
+			var result = celsiusToFarenheit(celsius);
+			alert(celsius + " celsius converted to fahrenheit is " + result);
+			break;
+
+		case '3':
+			guessingGame();
 			break;
 	}
 }
 
-if (winning)
-	alert("Congratufuckinglations");
-else
-	alert("Sorry, bro. The number was " + rand);
+function fahrenheitToCelsius (fahrenheit) {
+	return Math.round((fahrenheit - 32) * 5 / 9);
+}
+
+function celsiusToFarenheit (celsius) {
+	return Math.round(celsius * 9 / 5 + 32);
+}
 
 /*
- *	Uppgift 4.1
+ *	Uppgift 5
  */
+function konvertera(stringConversion) {
+
+	var newString = '';
+
+	for (var i = 0; i < stringConversion.length; i++)
+	{
+		if (stringConversion[i].toUpperCase() === 'A')
+		{
+			newString += '#';
+		}
+		else if (stringConversion[i].toLowerCase() === stringConversion[i])
+		{
+			newString += stringConversion[i].toUpperCase();
+		}
+		else
+		{
+			newString += stringConversion[i].toLowerCase();
+		}
+	}
+
+	return newString;
+}
+
+var stringConversion = prompt("Test the function");
+
+var resultat = konvertera(stringConversion);
+
+alert("Input: " + stringConversion + ", Result: " + resultat);
+
+/*
+ *	Uppgift 6
+ */
+function triangel(a, b)
+{
+	
+}
