@@ -71,7 +71,7 @@ var isLooping = true;
 
 while (isLooping)
 {
-	var userInput = prompt("0. Exit\n\n1. Fahrenheit to Celsius\n2. Celsius to Fahrenheit\n3. Guess number");
+	var userInput = prompt("0. Exit\n\n1. Fahrenheit to Celsius\n2. Celsius to Fahrenheit\n3. Guess number\n4. Convert string\n5. Calculate the hypotenuse\n6. Tentamen\n7. When is my birthday!?");
 
 	switch (userInput)
 	{
@@ -94,6 +94,44 @@ while (isLooping)
 		case '3':
 			guessingGame();
 			break;
+
+		case '4':
+			var stringConversion = prompt("Input the string you wish to convert.");
+			var resultat = konvertera(stringConversion);
+			
+			alert("Input: " + stringConversion + ", Result: " + resultat);
+
+			break;
+
+		case '5':
+			var inputA = prompt("Length of A");
+			var inputB = prompt("Length of B");
+
+			var result = triangel(inputA, inputB);
+
+			alert("The result is " + result);
+			break;
+
+		case '6':
+			var myArray = [10, 2, 89, 9, 65, 13, 3];
+			var resultat = tentamen(myArray);
+			
+			for (var i = 0; i < resultat.length; i++) 
+			{
+				console.log(resultat[i])
+			}
+			break;
+
+		case '7':
+			var myBirthmonth = prompt("Which month, please.");
+			var myBirthday = prompt("Which day, please.");
+			var result = birthday(myBirthmonth, myBirthday);
+			
+			alert("Your birthday is in " + result + " days.");
+			
+			break;
+
+		default:
 	}
 }
 
@@ -131,16 +169,79 @@ function konvertera(stringConversion) {
 	return newString;
 }
 
-var stringConversion = prompt("Test the function");
-
-var resultat = konvertera(stringConversion);
-
-alert("Input: " + stringConversion + ", Result: " + resultat);
-
 /*
  *	Uppgift 6
  */
 function triangel(a, b)
 {
+	a = Math.pow(a, 2);
+	b = Math.pow(b, 2);
+
+	return Math.round(Math.sqrt(a + b));
+}
+
+/*
+ *	Uppgift 7
+ */
+function tentamen(myArray) {
+
+	if (myArray instanceof Array) {
+
+		var medelTal = 0;
+
+		for (var i = 0; i < myArray.length; i++) 
+			medelTal += myArray[i];
+
+		var middle = Math.round(medelTal / myArray.length);
+
+		var tempArray = myArray.sort(function(a, b) {
+			return a - b;
+		});
+
+		var min = tempArray[0];
+		var max = tempArray[tempArray.length - 1];
+
+		var newArray = [middle, max, min];
+
+		return newArray;
+	}
+}
+
+/*
+ *	Uppgift 8
+ */
+function birthday(month, day) {
 	
+	var currDate = new Date();
+	
+	if ((currDate.getMonth() + 1) > month)
+		var year = (currDate.getFullYear() + 1);
+	else
+		var year = currDate.getFullYear();
+
+	if ((currDate.getMonth() + 1) < 10)
+		month = "0" + month;
+
+	if ((currDate.getDay() + 1) < 10)
+		day = "0" + day;
+
+	var date1 = Date.now();
+
+	var date2 = Date.parse((year + "/" + month + "/" + day).toString());
+
+	var difference = date2 - date1;
+
+	var oneDay = 24 * 60 * 60 * 1000; // Hours * Minutes * Seconds * Miliseconds 
+
+	var numDays = Math.round(Math.abs(difference / oneDay)) + 1;
+
+	return numDays;
+}
+
+/*
+ *	Uppgift 9
+ */
+function startWriting() {
+
+	document.
 }
