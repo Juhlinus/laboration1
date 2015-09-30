@@ -131,6 +131,10 @@ while (isLooping)
 			
 			break;
 
+		case '8':
+			startWriting();
+			break;
+
 		default:
 	}
 }
@@ -243,5 +247,31 @@ function birthday(month, day) {
  */
 function startWriting() {
 
-	document.
+	var cell = [];
+
+	cell.push(["Förnamn:", "Efternamn:", "Telefon"]);
+	cell.push(["Haris", "Kljajic", "7716"]);
+	cell.push(["Linus", "Juhlin", "7715"]);
+	cell.push(["Mats", "Loock", "7714"]);
+
+	generateTable(cell);
+}
+
+function generateTable(cell) {
+
+	document.write("<table>");
+	document.write("<colgroup span='3'></colgroup>");
+	for (var i = 0; i < cell.length; i++) 
+	{
+		document.write("<tr>");
+		for (var j = 0; j < cell[i].length; j++) 
+		{
+			if (i === 0)
+				document.write("<th>" + cell[i][j] + "</th>");
+			else
+				document.write("<td>" + cell[i][j] + "</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
 }
