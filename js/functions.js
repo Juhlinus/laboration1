@@ -279,7 +279,11 @@ function generateTable(cell) {
 	document.write("<colgroup span='3'></colgroup>");
 	for (var i = 0; i < cell.length; i++) 
 	{
-		document.write("<tr>");
+		if (i % 2)
+			document.write("<tr class='even'>");
+		else
+			document.write("<tr class='uneven'>");
+
 		for (var j = 0; j < cell[i].length; j++) 
 		{
 			if (i === 0)
