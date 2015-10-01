@@ -221,7 +221,17 @@ function birthday(month, day) {
 	if ((currDate.getMonth() + 1) > month)
 		var year = (currDate.getFullYear() + 1);
 	else
-		var year = currDate.getFullYear();
+	{
+		if ((currDate.getMonth() + 1) === month)
+		{
+			if ((currDate.getDay() + 1) >= day)
+				var year = currDate.getFullYear();
+			else
+				var year = currDate.getFullYear() + 1;
+		}
+		else
+			var year = currDate.getFullYear() + 1;
+	}
 
 	if ((currDate.getMonth() + 1) < 10)
 		month = "0" + month;
@@ -231,9 +241,15 @@ function birthday(month, day) {
 
 	var date1 = Date.now();
 
+	console.log(date1);
+
 	var date2 = Date.parse((year + "/" + month + "/" + day).toString());
 
+	console.log(date2);
+
 	var difference = date2 - date1;
+
+	console.log(difference);
 
 	var oneDay = 24 * 60 * 60 * 1000; // Hours * Minutes * Seconds * Miliseconds 
 
