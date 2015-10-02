@@ -71,7 +71,7 @@ var isLooping = true;
 
 while (isLooping)
 {
-	var userInput = prompt("0. Exit\n\n1. Fahrenheit to Celsius\n2. Celsius to Fahrenheit\n3. Guess number\n4. Convert string\n5. Calculate the hypotenuse\n6. Tentamen\n7. When is my birthday!?");
+	var userInput = prompt("0. Exit\n\n1. Uppgift 1 & 2\n2. Fahrenheit to Celsius\n3. Celsius to Fahrenheit\n4. Guess number\n5. Convert string\n6. Calculate the hypotenuse\n7. Tentamen\n8. When is my birthday!?\n9. Table generating");
 
 	switch (userInput)
 	{
@@ -80,22 +80,27 @@ while (isLooping)
 			break;
 
 		case '1':
+			helloWorld();
+			rows();
+			break;
+
+		case '2':
 			var fahrenheit = prompt("Input fahrenheit you want to convert to celsius.");
 			var result = fahrenheitToCelsius(fahrenheit);
 			alert(fahrenheit + " fahrenheit converted to celsius is " + result);
 			break;
 
-		case '2':
+		case '3':
 			var celsius = prompt("Input celsius you want to convert to fahrenheit.");
 			var result = celsiusToFarenheit(celsius);
 			alert(celsius + " celsius converted to fahrenheit is " + result);
 			break;
 
-		case '3':
+		case '4':
 			guessingGame();
 			break;
 
-		case '4':
+		case '5':
 			var stringConversion = prompt("Input the string you wish to convert.");
 			var resultat = konvertera(stringConversion);
 			
@@ -103,7 +108,7 @@ while (isLooping)
 
 			break;
 
-		case '5':
+		case '6':
 			var inputA = prompt("Length of A");
 			var inputB = prompt("Length of B");
 
@@ -112,7 +117,7 @@ while (isLooping)
 			alert("The result is " + result);
 			break;
 
-		case '6':
+		case '7':
 			var myArray = [10, 2, 89, 9, 65, 13, 3];
 			var resultat = tentamen(myArray);
 			
@@ -122,7 +127,7 @@ while (isLooping)
 			}
 			break;
 
-		case '7':
+		case '8':
 			var myBirthmonth = prompt("Which month, please.");
 			var myBirthday = prompt("Which day, please.");
 			var result = birthday(myBirthmonth, myBirthday);
@@ -131,11 +136,12 @@ while (isLooping)
 			
 			break;
 
-		case '8':
+		case '9':
 			startWriting();
 			break;
 
 		default:
+			alert("That's not an option, solider!");
 	}
 }
 
