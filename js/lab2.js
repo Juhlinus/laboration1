@@ -43,8 +43,9 @@ function thisFunc(thisForm) {
 	}
 	else
 	{
-		// Get the content div
-		var contentElement = document.getElementsByClassName('content')[0];
+		// Parent element where we insert the new elements
+		var parentElement = document.getElementsByClassName('popup')[0];
+
 		// Get labels
 		var labelElement = document.getElementsByTagName('label');
 
@@ -54,16 +55,13 @@ function thisFunc(thisForm) {
 			// Don't print 'submit'
 			if (labelElement[i])
 			{
-				// Parent element where we insert the new elements
-				var parentElement = document.getElementsByClassName('popup')[0];
-
 				// Prepare labels to be inserted
 				var boldElement = document.createElement('strong');
 				var boldContent = document.createTextNode(labelElement[i].innerHTML);
 				boldElement.appendChild(boldContent);
 
 				// Insert the element
-				parentElement.insertBefore(boldElement, contentElement);
+				parentElement.insertBefore(boldElement, parentElement.lastChild);
 
 				// Prepare the inputted info to be inserted
 				var paragraphElement = document.createElement('p');
@@ -71,9 +69,23 @@ function thisFunc(thisForm) {
 				paragraphElement.appendChild(paragraphContent);
 
 				// Inser the element
-				parentElement.insertBefore(paragraphElement, contentElement);
+				parentElement.insertBefore(paragraphElement, parentElement.lastChild);
 			}
 		}
+
+		var buttonElement = document.createElement('button');
+		buttonElement.setAttribute('onclick', 'formSubmit();');
+		var buttonContent = document.createTextNode('Bekräfta Köp');
+		buttonElement.appendChild(buttonContent);
+
+		parentElement.insertBefore(buttonElement, parentElement.lastChild);
+
+		var buttonElement = document.createElement('button');
+		buttonElement.setAttribute('onclick', 'closeFunc();');
+		var buttonContent = document.createTextNode('Avbryt');
+		buttonElement.appendChild(buttonContent);
+
+		parentElement.insertBefore(buttonElement, parentElement.lastChild);
 
 		// Make the popup box appear
 		var currElement = document.getElementById('popup1');
@@ -117,73 +129,72 @@ function isValid (inputElement) {
 		case 'first_name':
 		case 'last_name':
 
-			// Match A-Z and a-z 
-			var regex = /^[a-zA-Z]+$/;
-			var result = inputElement.value.match(regex);
+		// Match A-Z and a-z 
+		var regex = /^[a-zA-Z]+$/;
+		var result = inputElement.value.match(regex);
 
-			// If no match was found then 
-			// the name is invalid.
-			if (result === null)
-				errors = -1;
-			
-			break;
+		// If no match was found then 
+		// the name is invalid.
+		if (result === null)
+			errors = -1;
+		
+		break;
 
-			case 'postal_code':
-			// Only allow SE,  two 
-			// characters. Space 
-			// thereafter is optional.
-			// Accept numbers from 0-9, 
-			// as many as you like. As
-			// well as space or dash
-			// anywhere between.
+		case 'postal_code':
+		// Only allow SE,  two 
+		// characters. Space 
+		// thereafter is optional.
+		// Accept numbers from 0-9, 
+		// as many as you like. As
+		// well as space or dash
+		// anywhere between.
 
-			var regex = /^([SE]{2})?(\s)?([0-9(\s)?(\-)?]+)$/;
-			
-			var result = inputElement.value.match(regex);
+		var regex = /^([SE]{2})?(\s)?([0-9(\s)?(\-)?]+)$/;
+		
+		var result = inputElement.value.match(regex);
 
-			if (result === null)
-			{
-				errors = -1;
-				break;
-			}
-
-			// Make sure no spaces or dashes are left.
-			var newValue = result[3].replace('-', '');
-			newValue = newValue.replace(' ', '');
-
-			// Only 5 digits in postal codes
-			if (newValue <= 5)
-				errors = -1;
-			else
-				inputElement.value = newValue;
-
-			break;
-
-			case 'email':
-
-			// Allow numbers and characters
-			// before @ separated by .
-			// Require @ and allow numbers
-			// and characters thereafter.
-			// Require . followed by a-z.
-			var regex = /^[a-z0-9]+\.?[a-z0-9]+?@[a-z0-9]+\.[a-z]+$/;
-
-			var result = inputElement.value.match(regex);
-
-			if (result === null)
-				errors = -1;
-
-			break;
-
-			case 'submit':
+		if (result === null)
+		{
+			errors = -1;
 			break;
 		}
 
-		if (errors === 0)
-			inputElement.nextSibling.setAttribute("class", "fa fa-check");
-		else 
-			inputElement.nextSibling.setAttribute("class", "fa fa-times");
+		// Make sure no spaces or dashes are left.
+		var newValue = result[3].replace('-', '');
+		newValue = newValue.replace(' ', '');
 
-		return 1;
+		// Only 5 digits in postal codes
+		if (newValue <= 5)
+			errors = -1;
+		else
+			inputElement.value = newValue;
+
+		break;
+
+		case 'email':
+
+		// Allow numbers and characters
+		// before @ separated by .
+		// Require @ and allow numbers
+		// and characters thereafter.
+		// Require . followed by a-z.
+		var regex = /^[a-z0-9]+\.?[a-z0-9]+?@[a-z0-9]+\.[a-z]+$/;
+
+		var result = inputElement.value.match(regex);
+
+		if (result === null)
+			errors = -1;
+
+		break;
+
+		case 'submit':
+		break;
 	}
+
+	if (errors === 0)
+		inputElement.nextSibling.setAttribute("class", "fa fa-check");
+	else 
+		inputElement.nextSibling.setAttribute("class", "fa fa-times");
+
+	return 1;
 }
