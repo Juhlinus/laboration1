@@ -2,16 +2,40 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/lab2.css">
 	<title>Lab 2</title>
 </head>
 <body>
-	<form action="#" onsubmit="return thisFunc(this);">
-		<input type="text" name="first_name" />
-		<input type="text" name="last_name" />
-		<input type="text" name="postal_code" />
-		<input type="text" name="email" />
+	<form action="#" id="myForm">
+		<label>First Name</label>
+		<div><input type="text" name="first_name" onblur="isValid(this);" /><span></span></div>
+		<label>Last Name</label>
+		<div><input type="text" name="last_name" onblur="isValid(this);" /><span></span></div>
+		<label>Postal Code</label>
+		<div><input type="text" name="postal_code" onblur="isValid(this);" /><span></span></div>
+		<label>Email</label>
+		<div><input type="text" name="email" onblur="isValid(this);" /><span></span></div>
+		<label>Prismodell</label>
+		<div>
+			<select name="select">
+				<option>Low</option>
+				<option>Medium</option>
+				<option>High</option>
+			</select>
+		</div>
 		<input type="submit" value="submit" name="submit" />
 	</form>
+	<div id="popup1" class="overlay">
+		<div class="popup">
+			<h2>Vänligen bekräfta köp</h2>
+			<a class="close" href="#">×</a>
+			<div class="content">
+			</div>
+			<button onclick="closeFunc();">Close</button>
+			<button onclick="formSubmit();">Bekräfta köp</button>
+		</div>
+	</div>
 	<script type="text/javascript" src="../js/lab2.js"></script>
 </body>
 </html>

@@ -1,65 +1,113 @@
+function sendData() {
+	var XHR = new XMLHttpRequest();
+
+	// We bind the FormData object and the form element
+	var FD  = new FormData(form);
+
+	// We define what will happen if the data are successfully sent
+	XHR.addEventListener("load", function(event) {
+		alert(event.target.responseText);
+	});
+
+	// We define what will happen in case of error
+	XHR.addEventListener("error", function(event) {
+		alert('Oups! Something goes wrong.');
+	});
+
+	// We setup our request
+	XHR.open("POST", "");
+
+	// The data sent are the one the user provide in the form
+	XHR.send(FD);
+}
+
+var form = document.getElementById("myForm");
+
+// Capture submit event and stop it
+form.addEventListener("submit", function (event) {
+	event.preventDefault();
+
+	thisFunc(form);
+
+});
+
 function thisFunc(thisForm) {
-	
-	// For error handling
-	var error = [0];
 
-	// Since thisForm can be treated as 
-	// an object we can just access the 
-	// input field as a property and then 
-	// get the value of it.
-	/*
+	// Need to check if all fields are validated
+	var checks = document.getElementsByClassName('fa-check');
+
+	if (checks.length !== 4)
 	{
-		// Now contains entire html element
-		var first_name = thisForm.first_name;
-		
-		// Now only contains the value of 
-		// the value attribute
-		first_name = first_name.value;
-
-		var last_name = thisForm.last_name;
-		last_name = last_name.value;
-
-		var postal_code = thisForm.postal_code;
-		postal_code = postal_code.value;
-
-		var last_name = thisForm.last_name;
-		last_name = last_name.value;
-
-		var email = thisForm.email;
-		email = email.value;
+		alert("Please fill out all the fields.");
+		return false;
 	}
-	*/
+	else
+	{
+		// Get the content div
+		var contentElement = document.getElementsByClassName('content')[0];
+		// Get labels
+		var labelElement = document.getElementsByTagName('label');
 
-	for (var i = 0; i < thisForm.length; i++) {
+		// Loop through all the fields and print them out
+		for (var i = 0; i < thisForm.length; i++) {
 
-		// Pass the current element as an argument
-		// to the isEmpty() function.
-		if (isEmpty(thisForm[i]) !== 1)
-			error.push(thisForm[i].getAttribute("name") + " is empty.");
-	}
+			// Don't print 'submit'
+			if (labelElement[i])
+			{
+				// Parent element where we insert the new elements
+				var parentElement = document.getElementsByClassName('popup')[0];
 
-	// Let's iterate through the errors and print 
-	// them, skipping first value since it's 0 by
-	// default.
-	for (var i = 0; i < error.length; i++) {
-		
-		if (error.length === 1)
-			break;
-		else if (i === 0)
-			continue;
-		else
-			console.log(error[i]);
+				// Prepare labels to be inserted
+				var boldElement = document.createElement('strong');
+				var boldContent = document.createTextNode(labelElement[i].innerHTML);
+				boldElement.appendChild(boldContent);
+
+				// Insert the element
+				parentElement.insertBefore(boldElement, contentElement);
+
+				// Prepare the inputted info to be inserted
+				var paragraphElement = document.createElement('p');
+				var paragraphContent = document.createTextNode(thisForm[i].value);
+				paragraphElement.appendChild(paragraphContent);
+
+				// Inser the element
+				parentElement.insertBefore(paragraphElement, contentElement);
+			}
+		}
+
+		// Make the popup box appear
+		var currElement = document.getElementById('popup1');
+		currElement.setAttribute("class", "visible");
 	}
 }
 
-function isEmpty (inputElement) {
 
-	console.log(inputElement.getAttribute("name") + " : " + inputElement.value);
-	
+function formSubmit() {
+	// Replace class with one that sets opacity to 0
+	var currElement = document.getElementById('popup1');
+	currElement.setAttribute("class", "overlay");
+
+	// Call submit form function
+	sendData();
+}
+
+function closeFunc() {
+	// Replace class with one that sets opacity to 0
+	var currElement = document.getElementById('popup1');
+	currElement.setAttribute("class", "overlay");
+}
+
+function isValid (inputElement) {
+
 	// Check if inputElement is either an empty 
 	// string or null
 	if (!inputElement.value || inputElement.value === null)
+	{
+		inputElement.nextSibling.setAttribute("class", "fa fa-times");
 		return 0;
+	}
+
+	var errors = 0;
 
 	switch (inputElement.getAttribute("name"))
 	{
@@ -76,11 +124,11 @@ function isEmpty (inputElement) {
 			// If no match was found then 
 			// the name is invalid.
 			if (result === null)
-				return -1;
+				errors = -1;
 			
 			break;
-		
-		case 'postal_code':
+
+			case 'postal_code':
 			// Only allow SE,  two 
 			// characters. Space 
 			// thereafter is optional.
@@ -94,16 +142,48 @@ function isEmpty (inputElement) {
 			var result = inputElement.value.match(regex);
 
 			if (result === null)
-				return -1;
+			{
+				errors = -1;
+				break;
+			}
+
+			// Make sure no spaces or dashes are left.
+			var newValue = result[3].replace('-', '');
+			newValue = newValue.replace(' ', '');
+
+			// Only 5 digits in postal codes
+			if (newValue <= 5)
+				errors = -1;
+			else
+				inputElement.value = newValue;
 
 			break;
 
-		case 'email': 
+			case 'email':
+
+			// Allow numbers and characters
+			// before @ separated by .
+			// Require @ and allow numbers
+			// and characters thereafter.
+			// Require . followed by a-z.
+			var regex = /^[a-z0-9]+\.?[a-z0-9]+?@[a-z0-9]+\.[a-z]+$/;
+
+			var result = inputElement.value.match(regex);
+
+			if (result === null)
+				errors = -1;
+
 			break;
 
-		case 'submit':
+			case 'submit':
 			break;
+		}
+
+		if (errors === 0)
+			inputElement.nextSibling.setAttribute("class", "fa fa-check");
+		else 
+			inputElement.nextSibling.setAttribute("class", "fa fa-times");
+
+		return 1;
 	}
-
-	return 1;
 }
